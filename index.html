@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vickey Chaudhary | Aspiring Software Engineer</title>
+  <meta name="description" content="Portfolio of Vickey Chaudhary — Aspiring Software Engineer at Newton School of Technology, Ajeenkya DY Patil University, Pune. Expected Graduation: 2030.">
+  <meta name="author" content="Vickey Chaudhary">
+  
+  <!-- Favicon Monogram SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080808'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='46' fill='%2338bdf8'>VC</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background lighting effects -->
+  <div class="ambient-glow ambient-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-center-right" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="Vickey Chaudhary Home">
+        <span class="monogram-badge">VC</span>
+        <span class="brand-text">
+          <span class="brand-name">Vickey Chaudhary</span>
+          <span class="brand-sub">Software Engineering</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Quick CTA Button -->
+      <div class="nav-cta-wrapper">
+        <a href="#contact" class="btn btn-nav-cta">
+          <span>Get in Touch</span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        
+        <!-- Live status indicator -->
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-text">Newton School of Technology • Class of 2030</span>
+        </div>
+
+        <!-- Greeting -->
+        <p class="hero-greeting">HEY, I’M</p>
+
+        <!-- Full Name - Largest & most striking element -->
+        <h1 class="hero-name">
+          <span class="name-gradient">VICKEY CHAUDHARY</span>
+        </h1>
+
+        <!-- Profession -->
+        <div class="hero-role-badge">
+          <span class="electric-line"></span>
+          <h2 class="hero-role">ASPIRING SOFTWARE ENGINEER</h2>
+          <span class="electric-line"></span>
+        </div>
+
+        <!-- Introduction Statement -->
+        <p class="hero-intro">
+          I’m a student at <strong>Newton School of Technology</strong>, <strong>Ajeenkya DY Patil University, Pune</strong>, passionate about programming, software development, and exploring the future of technology.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="heroExploreBtn">
+            <span>Explore My Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="heroContactBtn">
+            <span>Contact Me</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Hero Quick Stats / Meta Info Bar -->
+        <div class="hero-meta-strip">
+          <div class="meta-item">
+            <span class="meta-label">INSTITUTION</span>
+            <span class="meta-val">Newton School of Technology</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">UNIVERSITY</span>
+            <span class="meta-val">Ajeenkya DY Patil University</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">LOCATION</span>
+            <span class="meta-val">Pune, Maharashtra, India</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">GRADUATION</span>
+            <span class="meta-val highlight-val">2030</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">01 // OVERVIEW</span>
+          <h2 class="section-title">A LITTLE ABOUT ME</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Card -->
+          <div class="surface-card bio-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon-header">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <span class="card-chip">Personal Biography</span>
+            </div>
+
+            <p class="bio-text">
+              I’m <strong>Vickey Chaudhary</strong>, an aspiring software engineer studying at <strong>Newton School of Technology, Ajeenkya DY Patil University, Pune</strong>. I am learning Python and developing my programming skills while exploring software engineering and emerging technologies. My goal is to keep learning, build meaningful projects, and grow into a skilled software engineer.
+            </p>
+
+            <div class="bio-traits">
+              <div class="trait-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Python Enthusiast</span>
+              </div>
+              <div class="trait-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Problem Solving Mindset</span>
+              </div>
+              <div class="trait-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Continuous Learner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dedicated Education Details Card -->
+          <div class="surface-card education-details-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon-header">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <span class="card-chip">Education Details</span>
+            </div>
+
+            <div class="details-list">
+              <!-- Institution -->
+              <div class="detail-row">
+                <div class="detail-meta">
+                  <span class="detail-label">INSTITUTION</span>
+                  <span class="detail-primary">Newton School of Technology</span>
+                </div>
+              </div>
+
+              <!-- University -->
+              <div class="detail-row">
+                <div class="detail-meta">
+                  <span class="detail-label">UNIVERSITY</span>
+                  <span class="detail-primary">Ajeenkya DY Patil University</span>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="detail-row">
+                <div class="detail-meta">
+                  <span class="detail-label">LOCATION</span>
+                  <span class="detail-primary">Pune, Maharashtra, India</span>
+                </div>
+              </div>
+
+              <!-- Expected Graduation -->
+              <div class="detail-row highlight-row">
+                <div class="detail-meta">
+                  <span class="detail-label">EXPECTED GRADUATION</span>
+                  <span class="detail-primary graduation-year">2030</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">02 // ACADEMIC FOUNDATION</span>
+          <h2 class="section-title">EDUCATION</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="education-showcase">
+          <!-- Main Education Timeline Card -->
+          <div class="surface-card education-hero-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="edu-card-top">
+              <div class="edu-cap-wrapper">
+                <div class="edu-cap-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                </div>
+                <div class="edu-status-badge">
+                  <span class="pulse-ring"></span>
+                  <span>Currently Enrolled</span>
+                </div>
+              </div>
+
+              <div class="edu-time-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Expected Graduation: <strong>2030</strong></span>
+              </div>
+            </div>
+
+            <div class="edu-body">
+              <h3 class="edu-institution">Newton School of Technology</h3>
+              <h4 class="edu-university">Ajeenkya DY Patil University</h4>
+              
+              <div class="edu-location">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Pune, Maharashtra, India</span>
+              </div>
+
+              <div class="edu-divider"></div>
+
+              <div class="edu-highlights">
+                <div class="edu-highlight-item">
+                  <span class="highlight-title">Focus Area</span>
+                  <span class="highlight-desc">Computer Science, Software Engineering & Applied Programming</span>
+                </div>
+                <div class="edu-highlight-item">
+                  <span class="highlight-title">Core Environment</span>
+                  <span class="highlight-desc">Hands-on technology immersion, practical problem solving & industry-aligned curriculum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">03 // TECHNICAL FOCUS</span>
+          <h2 class="section-title">TECHNICAL SKILLS</h2>
+          <div class="section-title-bar"></div>
+          <p class="section-desc">
+            A transparent overview of my current programming language proficiency alongside the core domains I am actively learning.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <!-- Spotlight: Currently Known Skill -->
+          <div class="skills-category-block">
+            <div class="category-heading-wrap">
+              <span class="category-tag-active">CURRENTLY KNOWN SKILL</span>
+              <p class="category-sub">Language I am actively coding in and building fundamental proficiency with</p>
+            </div>
+
+            <div class="surface-card skill-spotlight-card">
+              <div class="card-glow" aria-hidden="true"></div>
+              
+              <div class="spotlight-content">
+                <div class="python-icon-box">
+                  <!-- Python official logo SVG -->
+                  <svg class="python-svg" viewBox="0 0 128 128" width="56" height="56">
+                    <path fill="url(#python-blue)" d="M63.2 2.1c-16.7 0-26.6 7.4-26.6 20.8v15.3h27.1v3.9H25.1c-14.7 0-24.8 8.8-24.8 25.5 0 16.4 9.1 25.9 23.8 25.9h7.7v-12.2c0-12.8 11.1-23.7 23.9-23.7h27v-28.7c0-14.3-11.4-26.8-29.5-26.8zm-14.4 8.7c3.2 0 5.8 2.6 5.8 5.8 0 3.2-2.6 5.8-5.8 5.8-3.2 0-5.8-2.6-5.8-5.8 0-3.2 2.6-5.8 5.8-5.8z"/>
+                    <path fill="url(#python-yellow)" d="M64.8 125.9c16.7 0 26.6-7.4 26.6-20.8V89.8H64.3v-3.9h38.6c14.7 0 24.8-8.8 24.8-25.5 0-16.4-9.1-25.9-23.8-25.9h-7.7v12.2c0 12.8-11.1 23.7-23.9 23.7h-27v28.7c0 14.3 11.4 26.8 29.5 26.8zm14.4-8.7c-3.2 0-5.8-2.6-5.8-5.8 0-3.2 2.6-5.8 5.8-5.8 3.2 0 5.8 2.6 5.8 5.8 0 3.2-2.6 5.8-5.8 5.8z"/>
+                    <defs>
+                      <linearGradient id="python-blue" x1="16.5%" y1="16.5%" x2="83.5%" y2="83.5%">
+                        <stop offset="0%" stop-color="#387eb8"/>
+                        <stop offset="100%" stop-color="#366994"/>
+                      </linearGradient>
+                      <linearGradient id="python-yellow" x1="16.5%" y1="16.5%" x2="83.5%" y2="83.5%">
+                        <stop offset="0%" stop-color="#ffe873"/>
+                        <stop offset="100%" stop-color="#ffd43b"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div class="spotlight-info">
+                  <div class="skill-name-row">
+                    <h3 class="skill-main-title">Python</h3>
+                    <span class="skill-level-badge">Core Foundation</span>
+                  </div>
+                  <p class="skill-detail-text">
+                    Learning Python syntax, data structures, conditional logic, loops, functions, and algorithmic problem solving. Applying Python to solidify foundational computer science concepts.
+                  </p>
+                  <div class="skill-tags">
+                    <span class="tag">Syntax & Logic</span>
+                    <span class="tag">Data Structures</span>
+                    <span class="tag">Algorithmic Basics</span>
+                    <span class="tag">Scripts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Areas Learning and Exploring -->
+          <div class="skills-category-block">
+            <div class="category-heading-wrap">
+              <span class="category-tag-learning">AREAS I AM LEARNING & EXPLORING</span>
+              <p class="category-sub">Actively developing understanding through coursework, practice, and hands-on experiments</p>
+            </div>
+
+            <div class="learning-cards-grid">
+              <!-- Item 1 -->
+              <div class="surface-card learning-card">
+                <div class="learning-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="learning-content">
+                  <h4 class="learning-title">Programming Fundamentals</h4>
+                  <p class="learning-desc">Mastering control flow, memory model concepts, modular code design, and computational reasoning.</p>
+                  <span class="learning-badge">In Progress</span>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="surface-card learning-card">
+                <div class="learning-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                </div>
+                <div class="learning-content">
+                  <h4 class="learning-title">Problem Solving</h4>
+                  <p class="learning-desc">Breaking down complex programming problems into logical steps, structured algorithms, and efficient solutions.</p>
+                  <span class="learning-badge">In Progress</span>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="surface-card learning-card">
+                <div class="learning-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="learning-content">
+                  <h4 class="learning-title">Software Development</h4>
+                  <p class="learning-desc">Learning software lifecycles, structured programming practices, debugging strategies, and version control principles.</p>
+                  <span class="learning-badge">In Progress</span>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="surface-card learning-card">
+                <div class="learning-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                </div>
+                <div class="learning-content">
+                  <h4 class="learning-title">Emerging Technologies</h4>
+                  <p class="learning-desc">Exploring modern developer tools, AI/automation foundations, and the evolving landscape of high-impact software.</p>
+                  <span class="learning-badge">In Progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">04 // PORTFOLIO</span>
+          <h2 class="section-title">THINGS I’M BUILDING</h2>
+          <div class="section-title-bar"></div>
+        </div>
+
+        <div class="projects-container">
+          <!-- Professional Empty State Card -->
+          <div class="surface-card projects-empty-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="empty-state-visual">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">vickey@newton-tech: ~/projects</span>
+              </div>
+              <div class="terminal-body">
+                <p class="terminal-line"><span class="t-prompt">$</span> status --current</p>
+                <p class="terminal-output"><span class="t-accent">Building foundations...</span> Learning Python & Software Architecture</p>
+                <p class="terminal-line"><span class="t-prompt">$</span> showcase --upcoming</p>
+                <p class="terminal-output"><span class="t-dim">[Upcoming] Python Utility Scripts, Computational Logic & Web Apps</span></p>
+              </div>
+            </div>
+
+            <div class="empty-state-content">
+              <div class="blueprint-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>Work In Progress</span>
+              </div>
+
+              <blockquote class="empty-quote">
+                “Every great engineer starts somewhere. This space will showcase my projects as I build and learn.”
+              </blockquote>
+
+              <p class="empty-explanation">
+                I am actively writing code, tackling algorithmic challenges, and working on beginner-to-intermediate Python projects. As each project reaches completion, it will be published right here with full documentation, live previews, and source code.
+              </p>
+
+              <div class="empty-action-row">
+                <a href="#contact" class="btn btn-secondary">
+                  <span>Connect to Discuss Ideas</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Project Cards Template Placeholder (Easily uncommented and modified) -->
+          <!-- 
+          To add a new project in the future, simply copy and customize this template:
+          <div class="surface-card project-card">
+            <div class="project-img-placeholder">
+              <img src="project-preview.jpg" alt="Project Screenshot">
+            </div>
+            <div class="project-info">
+              <span class="project-tech-tag">Python</span>
+              <h3 class="project-title">Your Project Name</h3>
+              <p class="project-desc">Description of the project and what problem it solves.</p>
+              <div class="project-links">
+                <a href="https://github.com/..." target="_blank" class="btn-link">View Source</a>
+              </div>
+            </div>
+          </div>
+          -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">05 // REACH OUT</span>
+          <h2 class="section-title">LET’S CONNECT</h2>
+          <div class="section-title-bar"></div>
+          <p class="section-desc">
+            Feel free to reach out for collaboration, tech discussions, or software development opportunities.
+          </p>
+        </div>
+
+        <div class="contact-hub-wrapper">
+          <div class="surface-card contact-card">
+            <div class="card-glow" aria-hidden="true"></div>
+
+            <div class="contact-card-header">
+              <div class="contact-avatar-monogram">VC</div>
+              <div class="contact-profile-info">
+                <h3 class="contact-name">Vickey Chaudhary</h3>
+                <p class="contact-role">Aspiring Software Engineer</p>
+                <p class="contact-affil">Newton School of Technology • Ajeenkya DY Patil University, Pune</p>
+              </div>
+            </div>
+
+            <div class="contact-divider"></div>
+
+            <!-- Email Display & Action Box -->
+            <div class="email-spotlight-box">
+              <div class="email-info-group">
+                <span class="email-label">PRIMARY EMAIL ADDRESS</span>
+                <span class="email-address" id="emailText">vickeychaudhary855@gmail.com</span>
+              </div>
+
+              <div class="email-button-group">
+                <!-- Working mailto button -->
+                <a href="mailto:vickeychaudhary855@gmail.com" class="btn btn-primary" id="emailMeBtn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <span>Email Me</span>
+                </a>
+
+                <!-- Working copy email button -->
+                <button type="button" class="btn btn-secondary" id="copyEmailBtn" aria-label="Copy email address to clipboard">
+                  <svg class="copy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <svg class="check-icon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span id="copyBtnText">Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Toast feedback for copy action -->
+            <div class="toast-message" id="toastMessage" role="status" aria-live="polite">
+              Email copied to clipboard!
+            </div>
+
+            <!-- Social / Profile Placeholders (Without Fake Links) -->
+            <div class="social-placeholders">
+              <span class="social-section-title">PROFESSIONAL PROFILES</span>
+              <div class="placeholder-grid">
+                
+                <div class="placeholder-pill">
+                  <div class="pill-left">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                  </div>
+                  <span class="coming-soon-tag">Coming Soon</span>
+                </div>
+
+                <div class="placeholder-pill">
+                  <div class="pill-left">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                  </div>
+                  <span class="coming-soon-tag">Coming Soon</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-monogram">VC</span>
+        <div class="footer-text">
+          <p class="footer-copy">© 2026 <strong>Vickey Chaudhary</strong>. All rights reserved.</p>
+          <p class="footer-sub">Newton School of Technology • Ajeenkya DY Patil University, Pune • Class of 2030</p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <span>Back to top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
