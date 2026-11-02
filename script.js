@@ -1,13 +1,14 @@
 /**
  * ============================================================================
  * VICKEY CHAUDHARY — PORTFOLIO CLIENT ENGINE & CMS CONTROLLER
+ * Creative Direction: Editorial + Cinematic Brand Monograph
  * ============================================================================
  * 
  * Features:
- * - Data layer hydration from `data/portfolio-data.js`
+ * - Decoupled data layer hydration from `data/portfolio-data.js`
  * - Mobile navigation menu with full keyboard accessibility (WCAG AA)
- * - Scroll spy for active navigation highlighting
- * - Copy email to clipboard with animated toast notification
+ * - Dynamic scroll spy for section highlighting
+ * - Copy email to clipboard with animated feedback
  * - Interactive in-browser Content Manager (CMS) with instant code export
  * - Zero external runtime dependencies
  * ============================================================================
@@ -47,94 +48,119 @@ document.addEventListener('DOMContentLoaded', () => {
     // A. Hero Section
     const heroStatus = document.getElementById('heroStatusText');
     const heroIntro = document.getElementById('heroIntroText');
+    const curatorStrip = document.getElementById('heroCuratorStrip');
+
+    const mastheadStatus = document.getElementById('mastheadStatusText');
+    if (mastheadStatus && data.personal && data.personal.statusBadge) {
+      mastheadStatus.textContent = data.personal.statusBadge;
+    }
     if (heroStatus && data.personal && data.personal.statusBadge) {
       heroStatus.textContent = data.personal.statusBadge;
     }
     if (heroIntro && data.personal && data.personal.heroIntro) {
       heroIntro.innerHTML = data.personal.heroIntro;
     }
+    if (curatorStrip && data.personal && Array.isArray(data.personal.curatorIndex)) {
+      curatorStrip.innerHTML = data.personal.curatorIndex.map(c => `
+        <div class="curator-cell">
+          <div class="curator-meta-row">
+            <span class="curator-num">${c.num} //</span>
+            <span>${c.label}</span>
+          </div>
+          <span class="curator-val">${c.value}</span>
+        </div>
+      `).join('');
+    }
 
-    // B. About Section Paragraphs
+    // B. About Section Lead & Paragraphs
+    const aboutLead = document.getElementById('aboutLeadText');
     const aboutParagraphsContainer = document.getElementById('aboutParagraphs');
+
+    if (aboutLead && data.about && data.about.lead) {
+      aboutLead.textContent = data.about.lead;
+    }
     if (aboutParagraphsContainer && data.about && Array.isArray(data.about.paragraphs)) {
       aboutParagraphsContainer.innerHTML = data.about.paragraphs
-        .map(p => `<p class="bio-text">${p}</p>`)
+        .map(p => `<p class="monograph-body-p">${p}</p>`)
         .join('');
     }
 
-    // C. Builder Principles
+    // C. Curatorial Principles
     const principlesContainer = document.getElementById('aboutPrinciplesList');
     if (principlesContainer && data.about && Array.isArray(data.about.principles)) {
       principlesContainer.innerHTML = data.about.principles
         .map((pr, idx) => `
-          <div class="principle-item">
-            <div class="principle-header">
-              <span class="principle-num">0${idx + 1} //</span>
-              <h3 class="principle-title">${pr.title}</h3>
+          <div class="principle-entry">
+            <div class="principle-entry-header">
+              <span class="principle-entry-num">${pr.num ? pr.num + ' //' : ('0' + (idx + 1) + ' //')}</span>
+              <h3 class="principle-entry-title">${pr.title}</h3>
             </div>
-            <p class="principle-desc">${pr.description}</p>
+            <p class="principle-entry-desc">${pr.description}</p>
           </div>
         `).join('');
     }
 
-    // D. Featured Projects
+    // D. Featured Projects (Exhibition Cards)
     const projectsContainer = document.getElementById('featuredProjectsGrid');
     if (projectsContainer && Array.isArray(data.projects)) {
-      projectsContainer.innerHTML = data.projects.map(proj => {
-        let statusClass = 'status-build';
-        if (proj.status.toLowerCase().includes('live') || proj.status.toLowerCase().includes('prod')) {
-          statusClass = 'status-live';
-        } else if (proj.status.toLowerCase().includes('practice')) {
-          statusClass = 'status-practice';
+      projectsContainer.innerHTML = data.projects.map((proj, idx) => {
+        let statusClass = '';
+        const statusLower = (proj.status || '').toLowerCase();
+        if (statusLower.includes('live') || statusLower.includes('prod')) {
+          statusClass = 'exhibit-status-live';
         }
 
         const techPills = Array.isArray(proj.technologies)
-          ? proj.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')
+          ? proj.technologies.map(t => `<span class="exhibit-tag-pill">${t}</span>`).join('')
           : '';
 
         const liveAction = proj.liveUrl
-          ? `<a href="${proj.liveUrl}" class="btn-project btn-project-primary">
-              <span>Live Preview</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          ? `<a href="${proj.liveUrl}" class="btn-exhibit-action btn-exhibit-primary">
+              <span>Live Exhibition</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>`
           : '';
 
+        const isPractice = statusLower.includes('practice');
         const githubAction = proj.githubUrl
-          ? `<a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              <span>Source Code</span>
+          ? `<a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn-exhibit-action btn-exhibit-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>${isPractice ? 'Practice Repository' : 'View Repository'}</span>
             </a>`
           : '';
+
+        const exhibitIndex = proj.index || `EXHIBIT 0${idx + 1}`;
 
         return `
-          <article class="project-card">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="project-card-header">
-              <h3 class="project-title">${proj.title}</h3>
-              <span class="project-status-pill ${statusClass}">${proj.status}</span>
-            </div>
-            
-            <div class="project-meta-block">
-              <span class="project-meta-label">Problem Statement</span>
-              <p class="project-meta-text">${proj.problem}</p>
+          <article class="exhibition-card">
+            <div class="exhibit-top-row">
+              <span class="exhibit-index-badge">${exhibitIndex}</span>
+              <span class="exhibit-status-stamp ${statusClass}">${proj.status}</span>
             </div>
 
-            <div class="project-meta-block">
-              <span class="project-meta-label">My Contribution</span>
-              <p class="project-meta-text">${proj.contribution}</p>
+            <h3 class="exhibit-title">${proj.title}</h3>
+
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Problem Statement</span>
+              <p class="exhibit-text">${proj.problem}</p>
             </div>
 
-            <div class="project-tech-tags">
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Contribution & Engineering</span>
+              <p class="exhibit-text">${proj.contribution}</p>
+            </div>
+
+            <div class="exhibit-tech-tags">
               ${techPills}
             </div>
 
             ${proj.takeaway ? `
-              <div class="project-takeaway">
+              <div class="exhibit-takeaway-block">
                 <strong>Key Takeaway:</strong> ${proj.takeaway}
               </div>
             ` : ''}
 
-            <div class="project-actions">
+            <div class="exhibit-actions-row">
               ${liveAction}
               ${githubAction}
             </div>
@@ -147,56 +173,82 @@ document.addEventListener('DOMContentLoaded', () => {
     const sprintsContainer = document.getElementById('currentlyBuildingGrid');
     if (sprintsContainer && Array.isArray(data.currentlyBuilding)) {
       sprintsContainer.innerHTML = data.currentlyBuilding.map(sp => `
-        <div class="sprint-card">
-          <span class="sprint-tag">${sp.tag}</span>
-          <h4 class="sprint-title">${sp.title}</h4>
-          <p class="sprint-focus">${sp.focus}</p>
+        <div class="studio-sprint-sheet">
+          <span class="sprint-tag-stamp">${sp.tag}</span>
+          <h3 class="sprint-sheet-title">${sp.title}</h3>
+          <p class="sprint-sheet-focus">${sp.focus}</p>
         </div>
       `).join('');
     }
 
-    // F. Skills Section
+    // F. Skills Section (Demonstrated & Active Studies)
     const demonstratedStack = document.getElementById('demonstratedSkillsStack');
     const learningStack = document.getElementById('learningSkillsStack');
 
     if (demonstratedStack && data.skills && Array.isArray(data.skills.demonstrated)) {
       demonstratedStack.innerHTML = data.skills.demonstrated.map(sk => `
-        <div class="skill-item-card">
-          <div class="skill-item-header">
-            <h3 class="skill-item-name">${sk.name}</h3>
-            <span class="skill-item-level">${sk.level}</span>
+        <div class="skill-editorial-row">
+          <div class="skill-row-top">
+            <h3 class="skill-name-bold">${sk.name}</h3>
+            <span class="skill-status-tag">${sk.level || 'Demonstrated'}</span>
           </div>
-          <p class="skill-item-desc">${sk.highlight}</p>
+          <p class="skill-desc-text">${sk.detail || sk.highlight || ''}</p>
         </div>
       `).join('');
     }
 
     if (learningStack && data.skills && Array.isArray(data.skills.currentlyLearning)) {
       learningStack.innerHTML = data.skills.currentlyLearning.map(sk => `
-        <div class="learning-item-card">
-          <div class="skill-item-header">
-            <h3 class="skill-item-name">${sk.name}</h3>
-            <span class="learning-item-status">${sk.status}</span>
+        <div class="skill-editorial-row">
+          <div class="skill-row-top">
+            <h3 class="skill-name-bold">${sk.name}</h3>
+            <span class="skill-status-tag">${sk.status || 'Active Study'}</span>
           </div>
-          <p class="skill-item-desc">${sk.focus}</p>
+          <p class="skill-desc-text">${sk.detail || sk.focus || ''}</p>
         </div>
       `).join('');
     }
 
-    // G. Journey Section (Learning Timeline)
+    // G. Journey Section (Learning Chronology)
     const journeyContainer = document.getElementById('journeyTimelineItems');
     if (journeyContainer && Array.isArray(data.journey)) {
       journeyContainer.innerHTML = data.journey.map(jn => `
-        <div class="timeline-entry">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-year-pill">${jn.year}</span>
-              <span class="timeline-period">${jn.period}</span>
+        <div class="provenance-milestone-entry">
+          <div class="provenance-node-marker"></div>
+          <div class="provenance-entry-card">
+            <div class="provenance-card-meta">
+              <span class="provenance-year-tag">${jn.year}</span>
+              <span class="provenance-phase-tag">${jn.period}</span>
             </div>
-            <h3 class="timeline-title">${jn.title}</h3>
-            <p class="timeline-narrative">${jn.description}</p>
+            <h3 class="provenance-card-title">${jn.title}</h3>
+            <p class="provenance-card-desc">${jn.description}</p>
           </div>
+        </div>
+      `).join('');
+    }
+
+    // G2. Current Focus Indicator
+    const focusList = document.getElementById('currentFocusList');
+    if (focusList && data.currentFocus && Array.isArray(data.currentFocus.items)) {
+      focusList.innerHTML = data.currentFocus.items.map(item => `
+        <li class="focus-list-item">
+          <span class="focus-bullet" aria-hidden="true">✦</span>
+          <span>${item}</span>
+        </li>
+      `).join('');
+    }
+
+    // H. Achievements Section (Distinctions)
+    const achievementsContainer = document.getElementById('achievementsGrid');
+    if (achievementsContainer && Array.isArray(data.achievements)) {
+      achievementsContainer.innerHTML = data.achievements.map((ach, idx) => `
+        <div class="achievement-monograph-card">
+          <div class="achievement-card-top">
+            <span class="achievement-index-num">DISTINCTION // ${ach.num || ('0' + (idx + 1))}</span>
+            <span class="achievement-category-tag">${ach.category}</span>
+          </div>
+          <h3 class="achievement-card-title">${ach.title}</h3>
+          <p class="achievement-card-detail">${ach.description}</p>
         </div>
       `).join('');
     }
@@ -330,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset state after 3 seconds
         clearTimeout(copyTimeout);
         copyTimeout = setTimeout(() => {
-          if (copyBtnText) copyBtnText.textContent = 'Copy Email';
+          if (copyBtnText) copyBtnText.textContent = 'Copy Address';
           if (copyIcon) copyIcon.classList.remove('hidden');
           if (checkIcon) checkIcon.classList.add('hidden');
           if (toastMessage) toastMessage.classList.remove('show');
@@ -355,6 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cmsProjectsList = document.getElementById('cmsProjectsList');
     const cmsSkillsList = document.getElementById('cmsSkillsList');
     const cmsJourneyList = document.getElementById('cmsJourneyList');
+    const cmsAchievementsList = document.getElementById('cmsAchievementsList');
 
     const updateCmsFieldsFromData = () => {
       const data = window.PORTFOLIO_DATA;
@@ -370,9 +423,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Projects overview
       if (cmsProjectsList && Array.isArray(data.projects)) {
         cmsProjectsList.innerHTML = data.projects.map((p, i) => `
-          <div style="padding:10px 14px; background:#18181e; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-            <div style="font-weight:700; color:#fff; font-size:0.92rem;">#${i + 1}: ${p.title}</div>
-            <div style="font-size:0.78rem; color:#a1a1aa; margin-top:2px;">Status: <span style="color:#38bdf8;">${p.status}</span> • Tech: ${p.technologies.join(', ')}</div>
+          <div style="padding:10px 14px; background:#f5f2eb; border-radius:3px; border:1px solid #dcd7ce;">
+            <div style="font-weight:700; color:#141413; font-size:0.92rem;">#${i + 1}: ${p.title}</div>
+            <div style="font-size:0.78rem; color:#55544f; margin-top:2px;">Status: <span style="color:#0F38E8; font-weight:600;">${p.status}</span> • Tech: ${p.technologies.join(', ')}</div>
           </div>
         `).join('');
       }
@@ -382,13 +435,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const dem = data.skills.demonstrated ? data.skills.demonstrated.map(s => s.name).join(', ') : '';
         const lrn = data.skills.currentlyLearning ? data.skills.currentlyLearning.map(s => s.name).join(', ') : '';
         cmsSkillsList.innerHTML = `
-          <div style="padding:10px 14px; background:#18181e; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-            <div style="font-weight:700; color:#38bdf8; font-size:0.85rem; margin-bottom:4px;">Demonstrated Skills:</div>
-            <div style="font-size:0.86rem; color:#f5f5f5;">${dem}</div>
+          <div style="padding:10px 14px; background:#f5f2eb; border-radius:3px; border:1px solid #dcd7ce;">
+            <div style="font-weight:700; color:#0F38E8; font-size:0.85rem; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.04em;">Demonstrated Skills:</div>
+            <div style="font-size:0.86rem; color:#141413;">${dem}</div>
           </div>
-          <div style="padding:10px 14px; background:#18181e; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-            <div style="font-weight:700; color:#a855f7; font-size:0.85rem; margin-bottom:4px;">Currently Learning:</div>
-            <div style="font-size:0.86rem; color:#f5f5f5;">${lrn}</div>
+          <div style="padding:10px 14px; background:#f5f2eb; border-radius:3px; border:1px solid #dcd7ce; margin-top:8px;">
+            <div style="font-weight:700; color:#141413; font-size:0.85rem; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.04em;">Currently Learning:</div>
+            <div style="font-size:0.86rem; color:#141413;">${lrn}</div>
           </div>
         `;
       }
@@ -396,16 +449,27 @@ document.addEventListener('DOMContentLoaded', () => {
       // Journey overview
       if (cmsJourneyList && Array.isArray(data.journey)) {
         cmsJourneyList.innerHTML = data.journey.map(j => `
-          <div style="padding:10px 14px; background:#18181e; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-            <div style="font-size:0.88rem; font-weight:700; color:#fff;">${j.year} — ${j.title}</div>
-            <div style="font-size:0.8rem; color:#a1a1aa; margin-top:2px;">${j.description}</div>
+          <div style="padding:10px 14px; background:#f5f2eb; border-radius:3px; border:1px solid #dcd7ce;">
+            <div style="font-size:0.88rem; font-weight:700; color:#141413;">${j.year} [${j.period}] — ${j.title}</div>
+            <div style="font-size:0.8rem; color:#55544f; margin-top:2px;">${j.description}</div>
+          </div>
+        `).join('');
+      }
+
+      // Achievements overview
+      if (cmsAchievementsList && Array.isArray(data.achievements)) {
+        cmsAchievementsList.innerHTML = data.achievements.map((a, i) => `
+          <div style="padding:10px 14px; background:#f5f2eb; border-radius:3px; border:1px solid #dcd7ce;">
+            <div style="font-size:0.88rem; font-weight:700; color:#141413;">#${i + 1}: ${a.title}</div>
+            <div style="font-size:0.75rem; color:#0F38E8; font-weight:600; text-transform:uppercase; margin-top:2px;">${a.category}</div>
+            <div style="font-size:0.8rem; color:#55544f; margin-top:4px;">${a.description}</div>
           </div>
         `).join('');
       }
 
       // Code export preview
       if (cmsCodePreview) {
-        cmsCodePreview.textContent = `const PORTFOLIO_DATA = ${JSON.stringify(data, null, 2)};\n\nif (typeof window !== "undefined") { window.PORTFOLIO_DATA = PORTFOLIO_DATA; }`;
+        cmsCodePreview.textContent = `const PORTFOLIO_DATA = ${JSON.stringify(data, null, 2)};\n\nif (typeof window !== "undefined") {\n  window.PORTFOLIO_DATA = PORTFOLIO_DATA;\n}\nif (typeof module !== "undefined" && module.exports) {\n  module.exports = PORTFOLIO_DATA;\n}`;
       }
     };
 
@@ -491,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.PORTFOLIO_DATA.personal.heroIntro = cmsHeroIntro.value;
           hydratePortfolio(window.PORTFOLIO_DATA);
           if (cmsCodePreview) {
-            cmsCodePreview.textContent = `const PORTFOLIO_DATA = ${JSON.stringify(window.PORTFOLIO_DATA, null, 2)};\n\nif (typeof window !== "undefined") { window.PORTFOLIO_DATA = PORTFOLIO_DATA; }`;
+            cmsCodePreview.textContent = `const PORTFOLIO_DATA = ${JSON.stringify(window.PORTFOLIO_DATA, null, 2)};\n\nif (typeof window !== "undefined") {\n  window.PORTFOLIO_DATA = PORTFOLIO_DATA;\n}\nif (typeof module !== "undefined" && module.exports) {\n  module.exports = PORTFOLIO_DATA;\n}`;
           }
         }
       });
@@ -503,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   console.log(
     `%c VICKEY CHAUDHARY %c Aspiring Software Engineer & Developer \n Newton School of Technology • Ajeenkya DY Patil University, Pune (Class of 2030) `,
-    'background: #38bdf8; color: #080808; font-weight: bold; padding: 4px 8px; border-radius: 4px;',
-    'background: #18181e; color: #f5f5f5; padding: 4px 8px; border-radius: 4px;'
+    'background: #0F38E8; color: #FBF9F5; font-weight: bold; padding: 4px 8px; border-radius: 2px;',
+    'background: #141413; color: #FBF9F5; padding: 4px 8px; border-radius: 2px;'
   );
 });

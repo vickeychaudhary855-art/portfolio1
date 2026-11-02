@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vickey Chaudhary | Aspiring Software Engineer & Developer</title>
-  <meta name="description" content="Personal portfolio of Vickey Chaudhary — Aspiring Software Engineer building with Python and modern web technologies. Focused on problem solving, algorithms, and clean software architecture.">
+  <title>Vickey Chaudhary — Software Craft & Computing Monograph</title>
+  <meta name="description" content="Editorial portfolio of Vickey Chaudhary — Aspiring Software Engineer & Developer building with Python and web technologies. Focused on algorithms, systems, and clean software architecture.">
   <meta name="author" content="Vickey Chaudhary">
   
   <!-- Favicon Monogram SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080808'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='46' fill='%2338bdf8'>VC</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='4' fill='%23141413'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='800' font-size='46' fill='%23FAF8F5'>VC</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Editorial Serif + Neutral Grotesk + Precision Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   
@@ -21,20 +21,27 @@
   <script src="data/portfolio-data.js"></script>
 </head>
 <body>
-  <!-- Ambient background lighting effects -->
-  <div class="ambient-glow ambient-top-left" aria-hidden="true"></div>
-  <div class="ambient-glow ambient-center-right" aria-hidden="true"></div>
-  <div class="grid-overlay" aria-hidden="true"></div>
+  <!-- Editorial Top Masthead Strip -->
+  <div class="masthead-strip">
+    <div class="container masthead-inner">
+      <span>VOL. 01 // INDEPENDENT MONOGRAPH — PUNE, INDIA</span>
+      <div class="masthead-status-indicator">
+        <span class="status-dot-active"></span>
+        <span id="mastheadStatusText">Available for Collaborations & Technical Inquiries</span>
+      </div>
+      <span>EDITION 2026</span>
+    </div>
+  </div>
 
   <!-- Navigation Bar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-brand" aria-label="Vickey Chaudhary Home">
-        <span class="monogram-badge">VC</span>
-        <span class="brand-text">
-          <span class="brand-name">Vickey Chaudhary</span>
-          <span class="brand-sub">Software Engineering</span>
-        </span>
+        <span class="nav-monogram-badge">VC</span>
+        <div class="brand-text-wrap">
+          <span class="brand-title">Vickey Chaudhary</span>
+          <span class="brand-subtitle">Software Engineering</span>
+        </div>
       </a>
 
       <!-- Desktop Navigation Links -->
@@ -42,19 +49,21 @@
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#currently-building" class="nav-link">Building</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#journey" class="nav-link">Journey</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
         <a href="#education" class="nav-link">Education</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Quick CTA Button -->
+      <!-- Quick Action & Mobile Toggle -->
       <div class="nav-cta-wrapper">
-        <a href="#contact" class="btn btn-nav-cta">
-          <span>Get in Touch</span>
-          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
+        <a href="#contact" class="btn-nav-touch">
+          <span>Inquiries</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
           </svg>
         </a>
 
@@ -69,184 +78,162 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (ASYMMETRIC EDITORIAL COVER) -->
     <section class="hero-section" id="home">
-      <div class="container hero-container">
+      <div class="container">
         
-        <div class="hero-main-layout">
-          <!-- Text and details column -->
-          <div class="hero-text-content">
-            <!-- Live status indicator -->
-            <div class="status-pill">
-              <span class="status-dot"></span>
-              <span class="status-text" id="heroStatusText">Open to Collaborations & Learning • Pune, India</span>
-            </div>
+        <div class="hero-cover-layout">
+          <!-- Editorial Typography Column -->
+          <div class="hero-editorial-content">
+            <span class="editorial-kicker-pill" id="heroStatusText">
+              First-Year Computer Science Student • Pune, India
+            </span>
 
-            <!-- Greeting -->
-            <p class="hero-greeting">HEY, I’M</p>
+            <p class="editorial-salutation">Issue No. 01 // Computing & Craft</p>
 
-            <!-- Full Name - Largest & most striking element -->
-            <h1 class="hero-name">
-              <span class="name-gradient">VICKEY CHAUDHARY</span>
+            <h1 class="editorial-name-title">
+              VICKEY <span class="serif-italic-accent">CHAUDHARY</span>
             </h1>
 
-            <!-- Profession -->
-            <div class="hero-role-badge">
-              <span class="electric-line"></span>
-              <h2 class="hero-role">ASPIRING SOFTWARE ENGINEER & DEVELOPER</h2>
-              <span class="electric-line"></span>
+            <div class="editorial-role-strap">
+              <span class="editorial-strap-rule"></span>
+              <h2 class="editorial-role-text">Aspiring Software Engineer & Developer</h2>
             </div>
 
-            <!-- Introduction Statement -->
-            <p class="hero-intro" id="heroIntroText">
-              Building software from first principles with <strong>Python</strong>. Passionate about problem solving, algorithms, and crafting clean, functional digital products.
+            <p class="editorial-hero-intro" id="heroIntroText">
+              Pursuing B.Tech in Computer Science at Newton School of Technology (ADPU). Learning programming with <strong>Python</strong>, building foundational web projects, and exploring Artificial Intelligence.
             </p>
 
-            <!-- CTA Buttons -->
-            <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary" id="heroExploreBtn">
-                <span>Explore Projects</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-                </svg>
+            <div class="hero-actions-row">
+              <a href="#projects" class="btn btn-solid-ink" id="heroExploreBtn">
+                <span>Explore Selected Works</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
               </a>
-              <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="heroGithubBtn" aria-label="Visit Vickey's GitHub Profile">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub</span>
+              <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn btn-outlined-ink" id="heroGithubBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub Profile</span>
               </a>
-              <a href="#contact" class="btn btn-secondary" id="heroContactBtn">
-                <span>Contact Me</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
+              <a href="#contact" class="btn btn-cobalt" id="heroContactBtn">
+                <span>Get in Touch</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </a>
             </div>
           </div>
 
-          <!-- Portrait Image Frame -->
-          <div class="hero-image-wrapper">
-            <div class="portrait-glow" aria-hidden="true"></div>
-            <div class="hero-portrait-frame">
-              <img src="images.jpg" alt="Vickey Chaudhary" class="hero-portrait-img" width="447" height="447" loading="eager">
+          <!-- Editorial Cinematic Portrait Frame -->
+          <div class="hero-portrait-column">
+            <div class="portrait-frame-editorial">
+              <div class="portrait-image-crop">
+                <img src="vickey-portrait.png" alt="Vickey Chaudhary — Aspiring Software Engineer" class="portrait-img-element" width="800" height="800" loading="eager">
+                <span class="portrait-plate-badge">PLATE 01</span>
+              </div>
+              <div class="portrait-caption-row">
+                <span class="caption-primary">Vickey Chaudhary</span>
+                <span>Pune, Maharashtra, India</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Quick Builder Proof Badges Row -->
-        <div class="hero-badges-row" id="heroBadgesRow">
-          <div class="builder-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            <span>Python Builder</span>
+        <!-- Editorial Curator Strip (4-Column Spec Index) -->
+        <div class="curator-strip" id="heroCuratorStrip">
+          <div class="curator-cell">
+            <div class="curator-meta-row">
+              <span class="curator-num">01 //</span>
+              <span>DISCIPLINE</span>
+            </div>
+            <span class="curator-val">Software Engineering & Python</span>
           </div>
-          <div class="builder-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            <span>B.Tech CSE '30</span>
+
+          <div class="curator-cell">
+            <div class="curator-meta-row">
+              <span class="curator-num">02 //</span>
+              <span>ACADEMICS</span>
+            </div>
+            <span class="curator-val">Newton School of Tech (ADPU)</span>
           </div>
-          <div class="builder-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path></svg>
-            <span>Newton School of Tech</span>
+
+          <div class="curator-cell">
+            <div class="curator-meta-row">
+              <span class="curator-num">03 //</span>
+              <span>FOCUS</span>
+            </div>
+            <span class="curator-val">Algorithms, Systems & Web Craft</span>
           </div>
-          <div class="builder-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Pune, India</span>
+
+          <div class="curator-cell">
+            <div class="curator-meta-row">
+              <span class="curator-num">04 //</span>
+              <span>LOCATION</span>
+            </div>
+            <span class="curator-val">Pune, Maharashtra, India</span>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- 01: ABOUT ME SECTION -->
+    <!-- 01: ABOUT ME (THE MONOGRAPH) -->
     <section class="section about-section" id="about">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-tag">01 // ABOUT ME</span>
-          <h2 class="section-title">ENGINEERING MINDSET & AMBITION</h2>
-          <div class="section-title-bar"></div>
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">01 // MONOGRAPH</span>
+          <h2 class="section-editorial-title">THE CRAFT, CURIOSITY & DIRECTION</h2>
+          <div class="section-title-rule"></div>
         </div>
 
-        <div class="about-grid">
-          <!-- Biography Card -->
-          <div class="surface-card bio-card">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="card-icon-header">
-              <div class="icon-circle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <span class="card-chip">Personal Narrative</span>
-            </div>
+        <div class="about-editorial-grid">
+          <!-- Left Column: The Narrative Essay -->
+          <div class="monograph-sheet">
+            <p class="monograph-lead" id="aboutLeadText">
+              I'm Vickey Chaudhary, a computer science student at Newton School of Technology (Ajeenkya DY Patil University, Pune) who began programming in August 2026, building software fundamentals step by step.
+            </p>
 
             <div id="aboutParagraphs">
-              <p class="bio-text">
-                I’m <strong>Vickey Chaudhary</strong>, a computer science student at <strong>Newton School of Technology</strong> (Ajeenkya DY Patil University, Pune) who believes that true engineering capability comes from building things yourself, not just watching tutorials.
+              <p class="monograph-body-p">
+                My journey into software development started in August 2026 with Python. Rather than rushing through superficial frameworks, I am focusing on building solid fundamentals—understanding variables, control flow, loops, and the logical architecture of code.
               </p>
-              <p class="bio-text">
-                My approach to software engineering is grounded in curiosity and first principles. Rather than relying solely on high-level abstractions, I strive to understand what happens under the hood—how Python manages data in memory, how algorithms scale with input size, and how well-architected software solves tangible everyday problems.
-              </p>
-              <p class="bio-text">
-                Currently, I spend my days writing modular Python scripts, analyzing algorithmic complexities, practicing version control on GitHub, and exploring modern frontend workflows. My goal is to build deep foundational mastery in computer science and grow into a full-stack engineer who builds resilient, high-impact systems.
+              <p class="monograph-body-p">
+                Alongside university coursework in computer science and artificial intelligence, I am learning version control with Git and GitHub, building responsive web interfaces with HTML, CSS, and JavaScript, and working consistently to develop into a capable software engineer.
               </p>
             </div>
 
-            <div class="bio-traits">
-              <div class="trait-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>First-Principles Thinker</span>
-              </div>
-              <div class="trait-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Practical Builder</span>
-              </div>
-              <div class="trait-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Daily Python Practice</span>
-              </div>
+            <div class="monograph-traits-row">
+              <span class="trait-stamp">First-Principles Mindset</span>
+              <span class="trait-stamp">Practical Engineering</span>
+              <span class="trait-stamp">Daily Code Discipline</span>
+              <span class="trait-stamp">Systems Curiosity</span>
             </div>
           </div>
 
-          <!-- Builder Principles Card -->
-          <div class="surface-card principles-card">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="card-icon-header">
-              <div class="icon-circle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <span class="card-chip">Core Values</span>
-            </div>
-
-            <div class="principles-list" id="aboutPrinciplesList">
-              <div class="principle-item">
-                <div class="principle-header">
-                  <span class="principle-num">01 //</span>
-                  <h3 class="principle-title">Code to Understand</h3>
+          <!-- Right Column: Curatorial Principles -->
+          <div class="principles-sheet">
+            <span class="sheet-header-label">CURATORIAL PRINCIPLES & VALUES</span>
+            
+            <div class="principles-stack" id="aboutPrinciplesList">
+              <div class="principle-entry">
+                <div class="principle-entry-header">
+                  <span class="principle-entry-num">01 //</span>
+                  <h3 class="principle-entry-title">Code to Understand</h3>
                 </div>
-                <p class="principle-desc">Writing scripts and data structures from scratch to develop intuition for edge cases, performance, and modularity.</p>
+                <p class="principle-entry-desc">Implementing scripts, data structures, and algorithms from scratch to build rock-solid intuition for performance, edge cases, and maintainability.</p>
               </div>
 
-              <div class="principle-item">
-                <div class="principle-header">
-                  <span class="principle-num">02 //</span>
-                  <h3 class="principle-title">Consistent Builder Cadence</h3>
+              <div class="principle-entry">
+                <div class="principle-entry-header">
+                  <span class="principle-entry-num">02 //</span>
+                  <h3 class="principle-entry-title">Cadence of a Learner</h3>
                 </div>
-                <p class="principle-desc">Committing verified code to GitHub, testing scripts rigorously, and turning academic concepts into running programs.</p>
+                <p class="principle-entry-desc">Practicing consistently, documenting learning milestones on GitHub, and turning concepts into working programs.</p>
               </div>
 
-              <div class="principle-item">
-                <div class="principle-header">
-                  <span class="principle-num">03 //</span>
-                  <h3 class="principle-title">Craft & Detail</h3>
+              <div class="principle-entry">
+                <div class="principle-entry-header">
+                  <span class="principle-entry-num">03 //</span>
+                  <h3 class="principle-entry-title">Honest Engineering</h3>
                 </div>
-                <p class="principle-desc">Valuing clean code formatting, semantic architecture, accessible interfaces, and zero-bullshit engineering.</p>
+                <p class="principle-entry-desc">Focusing on genuine understanding, clean code formatting, accessible interfaces, and steady growth without exaggerated claims.</p>
               </div>
             </div>
           </div>
@@ -255,274 +242,281 @@
       </div>
     </section>
 
-    <!-- 02: FEATURED PROJECTS & CURRENTLY BUILDING -->
+    <!-- 02: SELECTED PROJECTS (THE CURATED EXHIBITION) -->
     <section class="section projects-section" id="projects">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-tag">02 // PROJECTS</span>
-          <h2 class="section-title">THINGS I’VE BUILT & AM BUILDING</h2>
-          <div class="section-title-bar"></div>
-          <p class="section-desc">
-            Real problems, direct contributions, and verified source code. Here is what I have built and what I am currently working on.
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">02 // EXHIBITION</span>
+          <h2 class="section-editorial-title">SELECTED WORKS & ARCHIVES</h2>
+          <div class="section-title-rule"></div>
+          <p class="section-editorial-desc">
+            A curated exhibition of practical software builds, architectural problem statements, and verified code.
           </p>
         </div>
 
-        <div class="projects-layout">
-          <!-- Featured Projects Grid -->
-          <div class="projects-grid" id="featuredProjectsGrid">
-            
-            <!-- Project 1: Portfolio Engine -->
-            <article class="project-card">
-              <div class="card-glow" aria-hidden="true"></div>
-              <div class="project-card-header">
-                <h3 class="project-title">Personal Portfolio & Decoupled Content Engine</h3>
-                <span class="project-status-pill status-live">Production / Live</span>
-              </div>
-              
-              <div class="project-meta-block">
-                <span class="project-meta-label">Problem Statement</span>
-                <p class="project-meta-text">Needed a high-performance personal brand platform that communicates engineering potential without relying on generic cookie-cutter templates, while allowing portfolio content to be updated effortlessly without touching raw HTML.</p>
-              </div>
+        <div class="exhibition-gallery-grid" id="featuredProjectsGrid">
+          
+          <!-- Exhibit 01: Personal Portfolio Platform -->
+          <article class="exhibition-card">
+            <div class="exhibit-top-row">
+              <span class="exhibit-index-badge">EXHIBIT 01</span>
+              <span class="exhibit-status-stamp exhibit-status-live">Active Build / Live</span>
+            </div>
 
-              <div class="project-meta-block">
-                <span class="project-meta-label">My Contribution</span>
-                <p class="project-meta-text">Architected a custom dark-themed portfolio from scratch with an isolated JavaScript data layer (portfolio-data.js). Implemented semantic HTML5, keyboard navigation (WCAG AA), responsive CSS Grid, and zero external runtime dependencies.</p>
-              </div>
+            <h3 class="exhibit-title">Personal Web Portfolio & Brand Platform</h3>
 
-              <div class="project-tech-tags">
-                <span class="tech-tag">JavaScript (ES6+)</span>
-                <span class="tech-tag">CSS3 / Custom Properties</span>
-                <span class="tech-tag">HTML5 Semantics</span>
-                <span class="tech-tag">Git & GitHub Pages</span>
-              </div>
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Problem Statement</span>
+              <p class="exhibit-text">Needed a clean, authentic personal space to document my learning progression, projects, and contact channels as a computer science student.</p>
+            </div>
 
-              <div class="project-takeaway">
-                <strong>Key Takeaway:</strong> Mastered data-view decoupling, client-side progressive enhancement, and building polished UI with zero framework bloat.
-              </div>
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Contribution & Engineering</span>
+              <p class="exhibit-text">Developing a personal portfolio using Antigravity, working with HTML5, CSS3, and JavaScript, featuring a decoupled data store and responsive layout.</p>
+            </div>
 
-              <div class="project-actions">
-                <a href="#home" class="btn-project btn-project-primary">
-                  <span>Live Preview</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                  <span>Source Code</span>
-                </a>
-              </div>
-            </article>
+            <div class="exhibit-tech-tags">
+              <span class="exhibit-tag-pill">HTML5</span>
+              <span class="exhibit-tag-pill">CSS3</span>
+              <span class="exhibit-tag-pill">JavaScript</span>
+              <span class="exhibit-tag-pill">Antigravity</span>
+              <span class="exhibit-tag-pill">GitHub Pages</span>
+            </div>
 
-            <!-- Project 2: Python CLI Suite -->
-            <article class="project-card">
-              <div class="card-glow" aria-hidden="true"></div>
-              <div class="project-card-header">
-                <h3 class="project-title">Python Logic & CLI Utilities Suite</h3>
-                <span class="project-status-pill status-build">Active Build</span>
-              </div>
-              
-              <div class="project-meta-block">
-                <span class="project-meta-label">Problem Statement</span>
-                <p class="project-meta-text">Repetitive developer tasks such as text parsing, custom metric formatting, and multi-file organization require reliable, reusable scripts rather than manual effort.</p>
-              </div>
+            <div class="exhibit-takeaway-block">
+              <strong>Key Takeaway:</strong> Gained practical experience in frontend structure, styling, DOM interactions, and deploying via GitHub Pages.
+            </div>
 
-              <div class="project-meta-block">
-                <span class="project-meta-label">My Contribution</span>
-                <p class="project-meta-text">Writing a modular collection of command-line tools in Python 3 incorporating robust input validation, modular functions, formatted terminal outputs, and automated test cases.</p>
-              </div>
+            <div class="exhibit-actions-row">
+              <a href="#home" class="btn-exhibit-action btn-exhibit-primary">
+                <span>Live Exhibition</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn-exhibit-action btn-exhibit-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>View Repository</span>
+              </a>
+            </div>
+          </article>
 
-              <div class="project-tech-tags">
-                <span class="tech-tag">Python 3</span>
-                <span class="tech-tag">CLI Architecture</span>
-                <span class="tech-tag">File I/O</span>
-                <span class="tech-tag">Pytest Basics</span>
-              </div>
+          <!-- Exhibit 02: AI-Assisted Hospital Dashboard -->
+          <article class="exhibition-card">
+            <div class="exhibit-top-row">
+              <span class="exhibit-index-badge">EXHIBIT 02</span>
+              <span class="exhibit-status-stamp">Exploration / AI-Assisted</span>
+            </div>
 
-              <div class="project-takeaway">
-                <strong>Key Takeaway:</strong> Deepened practical skills in Python error handling, defensive programming, and writing cleanly separated modules.
-              </div>
+            <h3 class="exhibit-title">AI-Assisted Hospital Dashboard</h3>
 
-              <div class="project-actions">
-                <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                  <span>Repository</span>
-                </a>
-              </div>
-            </article>
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Problem Statement</span>
+              <p class="exhibit-text">Wanted to understand how healthcare interfaces organize patient queues, appointments, and staff status, exploring digital product creation before having formal programming knowledge.</p>
+            </div>
 
-            <!-- Project 3: DSA Practice Tracker -->
-            <article class="project-card">
-              <div class="card-glow" aria-hidden="true"></div>
-              <div class="project-card-header">
-                <h3 class="project-title">Algorithmic Problem Solving & Data Structures Practice</h3>
-                <span class="project-status-pill status-practice">Ongoing Practice</span>
-              </div>
-              
-              <div class="project-meta-block">
-                <span class="project-meta-label">Problem Statement</span>
-                <p class="project-meta-text">Solving algorithmic problems efficiently requires structured tracking of time/space complexity and recognizing pattern variations across problem domains.</p>
-              </div>
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Contribution & Engineering</span>
+              <p class="exhibit-text">Created a hospital dashboard prototype with the help of AI tools before starting programming classes. Guided layout requirements and user flow while learning how digital interfaces come together.</p>
+            </div>
 
-              <div class="project-meta-block">
-                <span class="project-meta-label">My Contribution</span>
-                <p class="project-meta-text">Maintaining a documented repository of Python solutions covering array manipulations, two-pointers, frequency counting, recursion, and search algorithms with edge-case breakdowns.</p>
-              </div>
+            <div class="exhibit-tech-tags">
+              <span class="exhibit-tag-pill">AI Prototyping</span>
+              <span class="exhibit-tag-pill">UI Wireframing</span>
+              <span class="exhibit-tag-pill">Product Design</span>
+            </div>
 
-              <div class="project-tech-tags">
-                <span class="tech-tag">Python 3</span>
-                <span class="tech-tag">Algorithms</span>
-                <span class="tech-tag">Complexity Analysis (Big-O)</span>
-                <span class="tech-tag">Data Structures</span>
-              </div>
+            <div class="exhibit-takeaway-block">
+              <strong>Key Takeaway:</strong> Sparked my curiosity about software architecture, inspiring me to pursue computer science and learn programming from the ground up.
+            </div>
 
-              <div class="project-takeaway">
-                <strong>Key Takeaway:</strong> Building intuition for algorithmic trade-offs, space complexity, and step-by-step logical decomposition.
-              </div>
+            <div class="exhibit-actions-row">
+              <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn-exhibit-action btn-exhibit-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>View Repository</span>
+              </a>
+            </div>
+          </article>
 
-              <div class="project-actions">
-                <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                  <span>Practice Tracker</span>
-                </a>
-              </div>
-            </article>
+          <!-- Exhibit 03: Python Fundamentals Lab -->
+          <article class="exhibition-card">
+            <div class="exhibit-top-row">
+              <span class="exhibit-index-badge">EXHIBIT 03</span>
+              <span class="exhibit-status-stamp">Active Learning</span>
+            </div>
 
+            <h3 class="exhibit-title">Python Programming Fundamentals Lab</h3>
+
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Problem Statement</span>
+              <p class="exhibit-text">Building computational thinking requires deliberate practice with fundamental programming constructs, control flow, and iterative logic.</p>
+            </div>
+
+            <div class="exhibit-section-block">
+              <span class="exhibit-label">Contribution & Engineering</span>
+              <p class="exhibit-text">Writing and documenting standalone Python practice exercises, solving algorithmic problems focused on conditions and loops, and organizing code using Git.</p>
+            </div>
+
+            <div class="exhibit-tech-tags">
+              <span class="exhibit-tag-pill">Python 3</span>
+              <span class="exhibit-tag-pill">Logic & Loops</span>
+              <span class="exhibit-tag-pill">Git & GitHub</span>
+            </div>
+
+            <div class="exhibit-takeaway-block">
+              <strong>Key Takeaway:</strong> Strengthening core problem-solving habits and developing a procedural mindset for breaking down problems.
+            </div>
+
+            <div class="exhibit-actions-row">
+              <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="btn-exhibit-action btn-exhibit-secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>Practice Repository</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03: CURRENTLY BUILDING (THE STUDIO FLOOR) -->
+    <section class="section building-section" id="currently-building">
+      <div class="container">
+        
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">03 // STUDIO FLOOR</span>
+          <h2 class="section-editorial-title">ACTIVE SPRINTS & EXPERIMENTS</h2>
+          <div class="section-title-rule"></div>
+          <p class="section-editorial-desc">
+            Current engineering investigations, technical sprints, and architectural experiments happening right now.
+          </p>
+        </div>
+
+        <div class="studio-sprints-grid" id="currentlyBuildingGrid">
+          <div class="studio-sprint-sheet">
+            <span class="sprint-tag-stamp">PYTHON FUNDAMENTALS</span>
+            <h3 class="sprint-sheet-title">Programming Logic & Loops in Python</h3>
+            <p class="sprint-sheet-focus">Practicing conditional statements, loops, basic functions, and foundational algorithmic exercises.</p>
           </div>
 
-          <!-- Currently Building / Active Sprints Showcase -->
-          <div class="currently-building-wrapper">
-            <div class="sub-section-title-wrap">
-              <span class="sub-section-badge">CURRENTLY IN PROGRESS</span>
-              <h3 class="sub-section-title">Active Sprints & Engineering Experiments</h3>
-            </div>
+          <div class="studio-sprint-sheet">
+            <span class="sprint-tag-stamp">COLLEGE COURSEWORK</span>
+            <h3 class="sprint-sheet-title">Artificial Intelligence Foundations</h3>
+            <p class="sprint-sheet-focus">Exploring core concepts of AI and computational thinking through first-year university classes.</p>
+          </div>
 
-            <div class="sprints-grid" id="currentlyBuildingGrid">
-              <div class="sprint-card">
-                <span class="sprint-tag">DSA Sprint</span>
-                <h4 class="sprint-title">Deepening Core Data Structures in Python</h4>
-                <p class="sprint-focus">Linked lists, stacks, queues, and recursive tree traversals implemented from scratch.</p>
-              </div>
-
-              <div class="sprint-card">
-                <span class="sprint-tag">Backend Exploration</span>
-                <h4 class="sprint-title">Building First Lightweight REST API</h4>
-                <p class="sprint-focus">Exploring FastAPI to create modular HTTP endpoints with Pydantic validation.</p>
-              </div>
-
-              <div class="sprint-card">
-                <span class="sprint-tag">Developer Tooling</span>
-                <h4 class="sprint-title">Git & Shell Workflow Mastery</h4>
-                <p class="sprint-focus">Automating terminal tasks, branch workflows, and writing comprehensive project READMEs.</p>
-              </div>
-            </div>
+          <div class="studio-sprint-sheet">
+            <span class="sprint-tag-stamp">WEB DEVELOPMENT</span>
+            <h3 class="sprint-sheet-title">Personal Portfolio Development</h3>
+            <p class="sprint-sheet-focus">Working with HTML, CSS, and JavaScript using Antigravity to craft an accessible personal website.</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- 03: TECHNICAL SKILLS SECTION -->
+    <!-- 04: TECHNICAL SKILLS (THE REPERTOIRE) -->
     <section class="section skills-section" id="skills">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-tag">03 // TECHNICAL FOCUS</span>
-          <h2 class="section-title">SKILLS & COMPETENCIES</h2>
-          <div class="section-title-bar"></div>
-          <p class="section-desc">
-            A transparent separation between technologies I actively code in and core computer science domains I am currently studying.
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">04 // REPERTOIRE</span>
+          <h2 class="section-editorial-title">TECHNICAL SKILLS & INQUIRIES</h2>
+          <div class="section-title-rule"></div>
+          <p class="section-editorial-desc">
+            A transparent separation between technologies I actively code in and core computer science domains under continuous study.
           </p>
         </div>
 
-        <div class="skills-dual-grid">
+        <div class="skills-editorial-grid">
           <!-- Column 1: Demonstrated Skills -->
-          <div class="skills-column">
-            <div class="skills-column-header">
-              <span class="column-tag">DEMONSTRATED & ACTIVE SKILLS</span>
-              <span class="column-badge">Verified in Projects</span>
+          <div class="skills-column-sheet">
+            <div class="column-sheet-header">
+              <span class="column-strap-title">Demonstrated Proficiencies</span>
+              <span class="column-strap-count">[ Foundational Practice ]</span>
             </div>
 
-            <div class="skills-cards-stack" id="demonstratedSkillsStack">
-              <div class="skill-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Python</h3>
-                  <span class="skill-item-level">Active Language</span>
+            <div class="skills-entry-list" id="demonstratedSkillsStack">
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Python 3</h3>
+                  <span class="skill-status-tag">Foundational Practice</span>
                 </div>
-                <p class="skill-item-desc">Core syntax, functions, data structures, file handling, and algorithmic problem solving.</p>
+                <p class="skill-desc-text">Syntax, variables, conditional statements, and loops. Building core algorithmic problem-solving habits.</p>
               </div>
 
-              <div class="skill-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Git & GitHub</h3>
-                  <span class="skill-item-level">Daily Workflow</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Git & GitHub</h3>
+                  <span class="skill-status-tag">Learning Workflow</span>
                 </div>
-                <p class="skill-item-desc">Branching, committing, repository management, Markdown documentation, and GitHub Pages.</p>
+                <p class="skill-desc-text">Basic version control commands, staging, commits, repository tracking, and hosting via GitHub Pages.</p>
               </div>
 
-              <div class="skill-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">HTML5 & Accessibility</h3>
-                  <span class="skill-item-level">Working Knowledge</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">HTML5</h3>
+                  <span class="skill-status-tag">Working Knowledge</span>
                 </div>
-                <p class="skill-item-desc">Semantic page structure, keyboard navigation, meta tags, and accessible document outline.</p>
+                <p class="skill-desc-text">Semantic elements, document structure, accessibility landmarks, and web page layout.</p>
               </div>
 
-              <div class="skill-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Modern CSS3</h3>
-                  <span class="skill-item-level">Working Knowledge</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Modern CSS3</h3>
+                  <span class="skill-status-tag">Working Knowledge</span>
                 </div>
-                <p class="skill-item-desc">Flexbox, CSS Grid, custom properties, responsive media queries, and dark-theme aesthetics.</p>
+                <p class="skill-desc-text">Flexbox, basic CSS Grid, custom properties, responsive styling, and clean typographic design.</p>
               </div>
 
-              <div class="skill-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Modern JavaScript</h3>
-                  <span class="skill-item-level">Working Knowledge</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">JavaScript Basics</h3>
+                  <span class="skill-status-tag">Working Knowledge</span>
                 </div>
-                <p class="skill-item-desc">ES6+ syntax, DOM manipulation, event handling, clipboard API, and data rendering.</p>
+                <p class="skill-desc-text">DOM manipulation, event listeners, array methods, and dynamic page hydration.</p>
               </div>
             </div>
           </div>
 
           <!-- Column 2: Currently Learning & Exploring -->
-          <div class="skills-column">
-            <div class="skills-column-header">
-              <span class="column-tag">CURRENTLY LEARNING & EXPLORING</span>
-              <span class="column-badge">In Progress</span>
+          <div class="skills-column-sheet">
+            <div class="column-sheet-header">
+              <span class="column-strap-title">Active Inquiries & Studies</span>
+              <span class="column-strap-count">[ In Progress ]</span>
             </div>
 
-            <div class="skills-cards-stack" id="learningSkillsStack">
-              <div class="learning-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Data Structures & Algorithms</h3>
-                  <span class="learning-item-status">Active Study</span>
+            <div class="skills-entry-list" id="learningSkillsStack">
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Artificial Intelligence</h3>
+                  <span class="skill-status-tag">College Classes</span>
                 </div>
-                <p class="skill-item-desc">Arrays, lists, recursion, sorting/searching algorithms, and asymptotic complexity (Big-O).</p>
+                <p class="skill-desc-text">Exploring foundational AI concepts and computational logic through university coursework.</p>
               </div>
 
-              <div class="learning-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Object-Oriented System Design</h3>
-                  <span class="learning-item-status">Active Study</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Algorithmic Problem Solving</h3>
+                  <span class="skill-status-tag">Active Practice</span>
                 </div>
-                <p class="skill-item-desc">Classes, inheritance, encapsulation, polymorphism, and modular architecture patterns.</p>
+                <p class="skill-desc-text">Solving beginner coding exercises, understanding iteration, loops, and procedural thinking.</p>
               </div>
 
-              <div class="learning-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Backend APIs & Web Services</h3>
-                  <span class="learning-item-status">Exploring</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Web Development Craft</h3>
+                  <span class="skill-status-tag">Ongoing Study</span>
                 </div>
-                <p class="skill-item-desc">HTTP methods, REST conventions, JSON serialization, and Python web frameworks (FastAPI/Flask).</p>
+                <p class="skill-desc-text">Learning modern frontend patterns, responsive layouts, and user interface accessibility.</p>
               </div>
 
-              <div class="learning-item-card">
-                <div class="skill-item-header">
-                  <h3 class="skill-item-name">Linux CLI & Scripting</h3>
-                  <span class="learning-item-status">Active Study</span>
+              <div class="skill-editorial-row">
+                <div class="skill-row-top">
+                  <h3 class="skill-name-bold">Computer Science Foundations</h3>
+                  <span class="skill-status-tag">B.Tech Program</span>
                 </div>
-                <p class="skill-item-desc">Zsh/Bash commands, piping, process management, and shell productivity tools.</p>
+                <p class="skill-desc-text">Core coursework in Computer Science and Technology at Newton School of Technology.</p>
               </div>
             </div>
           </div>
@@ -531,127 +525,191 @@
       </div>
     </section>
 
-    <!-- 04: MY JOURNEY (LEARNING TIMELINE) -->
+    <!-- 04: MY LEARNING JOURNEY (CHRONOLOGICAL TRAJECTORY) -->
     <section class="section journey-section" id="journey">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-tag">04 // TRAJECTORY</span>
-          <h2 class="section-title">MY LEARNING JOURNEY</h2>
-          <div class="section-title-bar"></div>
-          <p class="section-desc">
-            A chronological timeline of genuine learning milestones, key academic decisions, and technical progression.
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">04 // TRAJECTORY</span>
+          <h2 class="section-editorial-title">MY LEARNING JOURNEY</h2>
+          <div class="section-title-rule"></div>
+          <p class="section-editorial-desc">
+            An honest, verified chronology of my software journey—from my first lines of code in August 2026 to building web projects.
           </p>
         </div>
 
-        <div class="timeline-wrapper">
-          <div class="timeline-line" aria-hidden="true"></div>
+        <div class="provenance-timeline-wrap">
+          <div class="provenance-vertical-line" aria-hidden="true"></div>
           
-          <div class="timeline-items" id="journeyTimelineItems">
-            <!-- Milestone 1 -->
-            <div class="timeline-entry">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-year-pill">2024</span>
-                  <span class="timeline-period">Milestone 01</span>
+          <div id="journeyTimelineItems">
+            <!-- Milestone 01 -->
+            <div class="provenance-milestone-entry">
+              <div class="provenance-node-marker"></div>
+              <div class="provenance-entry-card">
+                <div class="provenance-card-meta">
+                  <span class="provenance-year-tag">August 2026</span>
+                  <span class="provenance-phase-tag">Milestone 01</span>
                 </div>
-                <h3 class="timeline-title">First Lines of Code & Computational Logic</h3>
-                <p class="timeline-narrative">Started learning Python programming. Built first terminal-based scripts, mastered variables, loops, conditionals, and wrote initial algorithmic problem solutions.</p>
+                <h3 class="provenance-card-title">Beginning My Computer Science Journey</h3>
+                <p class="provenance-card-desc">Joined Newton School of Technology at Ajeenkya DY Patil University, Pune, to pursue B.Tech in Computer Science and Technology. Expected graduation: 2030.</p>
               </div>
             </div>
 
-            <!-- Milestone 2 -->
-            <div class="timeline-entry">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-year-pill">2024</span>
-                  <span class="timeline-period">Milestone 02</span>
+            <!-- Milestone 02 -->
+            <div class="provenance-milestone-entry">
+              <div class="provenance-node-marker"></div>
+              <div class="provenance-entry-card">
+                <div class="provenance-card-meta">
+                  <span class="provenance-year-tag">August 2026</span>
+                  <span class="provenance-phase-tag">Milestone 02</span>
                 </div>
-                <h3 class="timeline-title">Enrolled at Newton School of Technology (ADPU)</h3>
-                <p class="timeline-narrative">Admitted into the B.Tech Computer Science & Technology program (Class of 2030) at Newton School of Technology, Ajeenkya DY Patil University, Pune, committing to intensive CS training.</p>
+                <h3 class="provenance-card-title">Started Learning Python</h3>
+                <p class="provenance-card-desc">Started my programming journey with Python. Currently building programming fundamentals and have progressed through loops.</p>
               </div>
             </div>
 
-            <!-- Milestone 3 -->
-            <div class="timeline-entry">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-year-pill">2024</span>
-                  <span class="timeline-period">Milestone 03</span>
+            <!-- Milestone 03 -->
+            <div class="provenance-milestone-entry">
+              <div class="provenance-node-marker"></div>
+              <div class="provenance-entry-card">
+                <div class="provenance-card-meta">
+                  <span class="provenance-year-tag">September 2026</span>
+                  <span class="provenance-phase-tag">Milestone 03</span>
                 </div>
-                <h3 class="timeline-title">Version Control & Open Source Hub Setup</h3>
-                <p class="timeline-narrative">Configured local Git environment and established GitHub profile (@vickeychaudhary855-art). Began maintaining daily code commits and documenting learning.</p>
+                <h3 class="provenance-card-title">Entered the Git & GitHub Ecosystem</h3>
+                <p class="provenance-card-desc">Started learning Git and GitHub to understand version control and software project management.</p>
               </div>
             </div>
 
-            <!-- Milestone 4 -->
-            <div class="timeline-entry">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-year-pill">2024</span>
-                  <span class="timeline-period">Milestone 04</span>
+            <!-- Milestone 04 -->
+            <div class="provenance-milestone-entry">
+              <div class="provenance-node-marker"></div>
+              <div class="provenance-entry-card">
+                <div class="provenance-card-meta">
+                  <span class="provenance-year-tag">2026</span>
+                  <span class="provenance-phase-tag">Milestone 04</span>
                 </div>
-                <h3 class="timeline-title">Engineered Decoupled Personal Portfolio</h3>
-                <p class="timeline-narrative">Designed, coded, and deployed a high-performance personal brand platform with an isolated content data layer, responsive dark layout, and accessibility features.</p>
+                <h3 class="provenance-card-title">Built My First AI-Assisted Hospital Dashboard</h3>
+                <p class="provenance-card-desc">Created a hospital dashboard with the help of AI tools before I had programming knowledge. This was an early experience of building a digital product using AI assistance.</p>
               </div>
             </div>
 
-            <!-- Milestone 5 -->
-            <div class="timeline-entry">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-meta">
-                  <span class="timeline-year-pill">Current</span>
-                  <span class="timeline-period">Active Sprint</span>
+            <!-- Milestone 05 -->
+            <div class="provenance-milestone-entry">
+              <div class="provenance-node-marker"></div>
+              <div class="provenance-entry-card">
+                <div class="provenance-card-meta">
+                  <span class="provenance-year-tag">2026</span>
+                  <span class="provenance-phase-tag">Milestone 05</span>
                 </div>
-                <h3 class="timeline-title">Algorithmic Problem Solving & Microservices</h3>
-                <p class="timeline-narrative">Deepening data structure proficiency in Python while building modular CLI utilities and preparing to architect my first RESTful web application.</p>
+                <h3 class="provenance-card-title">Started Building My Personal Web Portfolio</h3>
+                <p class="provenance-card-desc">Started developing my personal portfolio using Antigravity and working with HTML, CSS and JavaScript.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Current Focus Indicator -->
+        <div class="current-focus-card" id="currentFocusBox">
+          <div class="current-focus-header">
+            <div class="current-focus-tag-row">
+              <span class="focus-pulse-dot" aria-hidden="true"></span>
+              <span class="focus-label-tag">CURRENT FOCUS</span>
+            </div>
+            <h3 class="focus-title">Currently Exploring</h3>
+          </div>
+          <ul class="focus-items-list" id="currentFocusList">
+            <li class="focus-list-item">
+              <span class="focus-bullet" aria-hidden="true">✦</span>
+              <span>Artificial Intelligence through college classes.</span>
+            </li>
+            <li class="focus-list-item">
+              <span class="focus-bullet" aria-hidden="true">✦</span>
+              <span>Continuing my programming and web development learning journey.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 06: ACHIEVEMENTS (DISTINCTIONS & MILESTONES) -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">06 // DISTINCTIONS</span>
+          <h2 class="section-editorial-title">MILESTONES & ACHIEVEMENTS</h2>
+          <div class="section-title-rule"></div>
+          <p class="section-editorial-desc">
+            Verified academic selection, engineering milestones, and continuous technical accomplishments.
+          </p>
+        </div>
+
+        <div class="achievements-editorial-grid" id="achievementsGrid">
+          <div class="achievement-monograph-card">
+            <div class="achievement-card-top">
+              <span class="achievement-index-num">DISTINCTION // 01</span>
+              <span class="achievement-category-tag">Academic Selection</span>
+            </div>
+            <h3 class="achievement-card-title">Admission to Newton School of Technology (ADPU)</h3>
+            <p class="achievement-card-detail">Selected into the forward-looking B.Tech in Computer Science & Technology program (Class of 2030) through rigorous entrance evaluation.</p>
+          </div>
+
+          <div class="achievement-monograph-card">
+            <div class="achievement-card-top">
+              <span class="achievement-index-num">DISTINCTION // 02</span>
+              <span class="achievement-category-tag">Engineering Architecture</span>
+            </div>
+            <h3 class="achievement-card-title">Engineered Decoupled Content Portfolio Engine</h3>
+            <p class="achievement-card-detail">Architected and shipped a bespoke personal brand website featuring decoupled JavaScript content store, keyboard accessibility (WCAG AA), and responsive editorial design.</p>
+          </div>
+
+          <div class="achievement-monograph-card">
+            <div class="achievement-card-top">
+              <span class="achievement-index-num">DISTINCTION // 03</span>
+              <span class="achievement-category-tag">Developer Foundations</span>
+            </div>
+            <h3 class="achievement-card-title">Active Version Control Practice</h3>
+            <p class="achievement-card-detail">Maintaining Git repositories on GitHub (@vickeychaudhary855-art) to track personal coding exercises, coursework, and portfolio iterations.</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- 05: EDUCATION (STREAMLINED & DIGNIFIED) -->
+    <!-- 07: EDUCATION (ACADEMICS) -->
     <section class="section education-section" id="education">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-tag">05 // ACADEMICS</span>
-          <h2 class="section-title">EDUCATION</h2>
-          <div class="section-title-bar"></div>
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">07 // ACADEMICS</span>
+          <h2 class="section-editorial-title">EDUCATION</h2>
+          <div class="section-title-rule"></div>
         </div>
 
-        <div class="education-streamlined-card">
-          <div class="edu-streamlined-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="academics-curated-card">
+          <div class="academics-cap-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
               <path d="M6 12v5c3 3 9 3 12 0v-5"/>
             </svg>
           </div>
 
-          <div class="edu-streamlined-body">
-            <h3 class="edu-streamlined-degree">Bachelor of Technology (B.Tech) — Computer Science & Technology</h3>
-            <h4 class="edu-streamlined-institution">Newton School of Technology, Ajeenkya DY Patil University</h4>
+          <div class="academics-content-body">
+            <h3 class="academics-degree-title">Bachelor of Technology (B.Tech) — Computer Science & Technology</h3>
+            <h4 class="academics-institution-name">Newton School of Technology, Ajeenkya DY Patil University</h4>
             
-            <div class="edu-streamlined-meta">
-              <span class="edu-meta-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>Pune, Maharashtra, India</span>
+            <div class="academics-meta-badges-row">
+              <span class="academics-meta-badge">
+                Location: <strong>Pune, Maharashtra, India</strong>
               </span>
-              <span class="edu-meta-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                <span>Expected Graduation: <strong>2030</strong></span>
+              <span class="academics-meta-badge">
+                Graduation: <strong>2030 (Expected)</strong>
               </span>
             </div>
 
-            <p class="edu-streamlined-note">
+            <p class="academics-body-note">
               Focusing on core computer science foundations, algorithms, systems programming, and modern software engineering practices.
             </p>
           </div>
@@ -660,146 +718,111 @@
       </div>
     </section>
 
-    <!-- 06: CONTACT SECTION -->
+    <!-- 08: CONTACT SECTION (COLOPHON & INQUIRIES) -->
     <section class="section contact-section" id="contact">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-tag">06 // REACH OUT</span>
-          <h2 class="section-title">LET’S CONNECT</h2>
-          <div class="section-title-bar"></div>
-          <p class="section-desc">
-            Feel free to reach out for collaboration, tech discussions, or software development opportunities.
+        <div class="editorial-section-header">
+          <span class="section-issue-tag">08 // INQUIRIES</span>
+          <h2 class="section-editorial-title">LET’S TALK CODE & ARCHITECTURE</h2>
+          <div class="section-title-rule"></div>
+          <p class="section-editorial-desc">
+            Feel free to reach out for collaboration, technical discussions, or software development opportunities.
           </p>
         </div>
 
-        <div class="contact-hub-wrapper">
-          <div class="surface-card contact-card">
-            <div class="card-glow" aria-hidden="true"></div>
+        <div class="contact-hub-sheet">
+          <div class="contact-sheet-header">
+            <div class="contact-profile-monogram">VC</div>
+            <div class="contact-profile-meta">
+              <h3 class="contact-name-bold">Vickey Chaudhary</h3>
+              <span class="contact-role-strap">Aspiring Software Engineer & Developer</span>
+              <span class="contact-affil-sub">Newton School of Technology • Ajeenkya DY Patil University, Pune</span>
+            </div>
+          </div>
 
-            <div class="contact-card-header">
-              <div class="contact-avatar-monogram">VC</div>
-              <div class="contact-profile-info">
-                <h3 class="contact-name">Vickey Chaudhary</h3>
-                <p class="contact-role">Aspiring Software Engineer & Developer</p>
-                <p class="contact-affil">Newton School of Technology • Ajeenkya DY Patil University, Pune</p>
-              </div>
+          <!-- Email Display & Action Box -->
+          <div class="email-inquiry-box">
+            <div>
+              <span class="email-label-strap">PRIMARY EMAIL DISPATCH</span>
+              <div class="email-address-display" id="emailText">vickeychaudhary855@gmail.com</div>
             </div>
 
-            <div class="contact-divider"></div>
+            <div class="email-actions-group">
+              <a href="mailto:vickeychaudhary855@gmail.com" class="btn btn-solid-ink" id="emailMeBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email Me</span>
+              </a>
 
-            <!-- Email Display & Action Box -->
-            <div class="email-spotlight-box">
-              <div class="email-info-group">
-                <span class="email-label">PRIMARY EMAIL ADDRESS</span>
-                <span class="email-address" id="emailText">vickeychaudhary855@gmail.com</span>
-              </div>
-
-              <div class="email-button-group">
-                <!-- Working mailto button -->
-                <a href="mailto:vickeychaudhary855@gmail.com" class="btn btn-primary" id="emailMeBtn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                  <span>Email Me</span>
-                </a>
-
-                <!-- Working copy email button -->
-                <button type="button" class="btn btn-secondary" id="copyEmailBtn" aria-label="Copy email address to clipboard">
-                  <svg class="copy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  <svg class="check-icon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span id="copyBtnText">Copy Email</span>
-                </button>
-              </div>
+              <button type="button" class="btn btn-outlined-ink" id="copyEmailBtn" aria-label="Copy email address to clipboard">
+                <svg class="copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <svg class="check-icon hidden" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F38E8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span id="copyBtnText">Copy Address</span>
+              </button>
             </div>
+          </div>
 
-            <!-- Toast feedback for copy action -->
-            <div class="toast-message" id="toastMessage" role="status" aria-live="polite">
-              Email copied to clipboard!
-            </div>
+          <!-- Toast Feedback -->
+          <div class="toast-message" id="toastMessage" role="status" aria-live="polite">
+            Email copied to clipboard!
+          </div>
 
-            <!-- Social & Direct Contact Channels -->
-            <div class="contact-channels">
-              <span class="social-section-title">DIRECT CHANNELS & PROFILES</span>
-              <div class="contact-channels-grid">
-                
-                <!-- WhatsApp Contact Button -->
-                <a href="https://wa.me/919216856536" target="_blank" rel="noopener noreferrer" class="contact-channel-card channel-whatsapp" aria-label="Chat with Vickey Chaudhary on WhatsApp">
-                  <div class="channel-card-left">
-                    <div class="channel-icon-box whatsapp-box">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                      </svg>
-                    </div>
-                    <div class="channel-info">
-                      <span class="channel-name">WhatsApp</span>
-                      <span class="channel-detail">+91 9216856536</span>
-                    </div>
-                  </div>
-                  <div class="channel-card-action">
-                    <span>Message</span>
-                    <svg class="action-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
+          <!-- Direct Channels -->
+          <div class="channels-list-wrap">
+            <span class="channels-title-strap">DIRECT PROFILES & COMMUNICATION</span>
+            <div class="channels-cards-grid">
+              
+              <!-- WhatsApp -->
+              <a href="https://wa.me/919216856536" target="_blank" rel="noopener noreferrer" class="channel-entry-card" aria-label="Chat on WhatsApp">
+                <div class="channel-card-left">
+                  <div class="channel-icon-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                     </svg>
                   </div>
-                </a>
-
-                <!-- GitHub Profile Button -->
-                <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="contact-channel-card channel-github" aria-label="Visit Vickey Chaudhary's GitHub Profile">
-                  <div class="channel-card-left">
-                    <div class="channel-icon-box github-box">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                      </svg>
-                    </div>
-                    <div class="channel-info">
-                      <span class="channel-name">GitHub</span>
-                      <span class="channel-detail">vickeychaudhary855-art</span>
-                    </div>
+                  <div class="channel-info-stack">
+                    <span class="channel-title-bold">WhatsApp</span>
+                    <span class="channel-sub-detail">+91 9216856536</span>
                   </div>
-                  <div class="channel-card-action">
-                    <span>View Profile</span>
-                    <svg class="action-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
+                </div>
+                <span class="channel-arrow-action">↗</span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="channel-entry-card" aria-label="Visit GitHub Profile">
+                <div class="channel-card-left">
+                  <div class="channel-icon-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                   </div>
-                </a>
-
-                <!-- LinkedIn Profile Button -->
-                <a href="https://www.linkedin.com/in/vickey-chaudhary-796892423/" target="_blank" rel="noopener noreferrer" class="contact-channel-card channel-linkedin" aria-label="Connect with Vickey Chaudhary on LinkedIn">
-                  <div class="channel-card-left">
-                    <div class="channel-icon-box linkedin-box">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                      </svg>
-                    </div>
-                    <div class="channel-info">
-                      <span class="channel-name">LinkedIn</span>
-                      <span class="channel-detail">vickey-chaudhary</span>
-                    </div>
+                  <div class="channel-info-stack">
+                    <span class="channel-title-bold">GitHub</span>
+                    <span class="channel-sub-detail">vickeychaudhary855-art</span>
                   </div>
-                  <div class="channel-card-action">
-                    <span>Connect</span>
-                    <svg class="action-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
+                </div>
+                <span class="channel-arrow-action">↗</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/vickey-chaudhary-796892423/" target="_blank" rel="noopener noreferrer" class="channel-entry-card" aria-label="Connect on LinkedIn">
+                <div class="channel-card-left">
+                  <div class="channel-icon-pill">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
                     </svg>
                   </div>
-                </a>
+                  <div class="channel-info-stack">
+                    <span class="channel-title-bold">LinkedIn</span>
+                    <span class="channel-sub-detail">vickey-chaudhary</span>
+                  </div>
+                </div>
+                <span class="channel-arrow-action">↗</span>
+              </a>
 
-              </div>
             </div>
-
           </div>
         </div>
 
@@ -807,37 +830,37 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER & COLOPHON -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-left">
-        <span class="footer-monogram">VC</span>
-        <div class="footer-text">
-          <p class="footer-copy">© 2026 <strong>Vickey Chaudhary</strong>. All rights reserved.</p>
-          <p class="footer-sub">Newton School of Technology • Ajeenkya DY Patil University, Pune • Class of 2030</p>
+    <div class="container footer-inner">
+      <div class="footer-colophon-left">
+        <span class="nav-monogram-badge">VC</span>
+        <div>
+          <p class="footer-copy-text">© 2026 <strong>Vickey Chaudhary</strong>. All rights reserved.</p>
+          <p class="footer-colophon-sub">Newton School of Technology • Ajeenkya DY Patil University, Pune • Class of 2030</p>
         </div>
       </div>
 
-      <div class="footer-right">
+      <div class="footer-right-actions">
         <!-- Content Management System Trigger -->
         <button type="button" class="btn-cms-trigger" id="openCmsBtn" aria-label="Open Content Management Tool">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-          <span>Content Manager</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <span>Content Desk</span>
         </button>
 
         <div class="footer-social-links">
           <a href="https://wa.me/919216856536" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="WhatsApp (+91 9216856536)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
           </a>
           <a href="https://github.com/vickeychaudhary855-art" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="GitHub (@vickeychaudhary855-art)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
           </a>
           <a href="https://www.linkedin.com/in/vickey-chaudhary-796892423/" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="LinkedIn (Vickey Chaudhary)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
@@ -845,24 +868,22 @@
           </a>
         </div>
 
-        <a href="#home" class="back-to-top" aria-label="Back to top">
-          <span>Back to top</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-          </svg>
+        <a href="#home" class="back-to-top-link" aria-label="Back to top">
+          <span>Top</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- CONTENT MANAGEMENT SYSTEM (CMS) MODAL -->
+  <!-- CONTENT MANAGEMENT SYSTEM (CMS) MODAL (EDITORIAL AUTHORING DESK) -->
   <div class="cms-modal-overlay" id="cmsModalOverlay" role="dialog" aria-modal="true" aria-labelledby="cmsModalTitle">
     <div class="cms-modal-container">
       
       <!-- Header -->
       <div class="cms-modal-header">
         <div class="cms-header-title-group">
-          <span class="cms-header-badge">CMS</span>
+          <span class="cms-header-badge">AUTHORING DESK</span>
           <h2 class="cms-modal-title" id="cmsModalTitle">Portfolio Content Manager</h2>
         </div>
         <button type="button" class="cms-modal-close-btn" id="closeCmsBtn" aria-label="Close Content Manager">✕</button>
@@ -874,6 +895,7 @@
         <button type="button" class="cms-tab-btn" data-tab="tab-projects" role="tab">Projects</button>
         <button type="button" class="cms-tab-btn" data-tab="tab-skills" role="tab">Skills</button>
         <button type="button" class="cms-tab-btn" data-tab="tab-journey" role="tab">Journey</button>
+        <button type="button" class="cms-tab-btn" data-tab="tab-achievements" role="tab">Achievements</button>
         <button type="button" class="cms-tab-btn" data-tab="tab-export" role="tab">Export / Save</button>
       </div>
 
@@ -885,30 +907,36 @@
           <div class="cms-field-group">
             <label class="cms-label" for="cmsHeroIntro">Hero Introduction Text</label>
             <textarea class="cms-textarea" id="cmsHeroIntro"></textarea>
-            <span class="cms-help-text">Displayed on the first screen immediately under your title.</span>
+            <span class="cms-help-text">Displayed on the cover immediately under your title.</span>
           </div>
           <div class="cms-field-group">
-            <label class="cms-label" for="cmsStatusText">Status Pill Text</label>
+            <label class="cms-label" for="cmsStatusText">Status Kicker Text</label>
             <input type="text" class="cms-input" id="cmsStatusText">
           </div>
         </div>
 
         <!-- Tab: Projects -->
         <div class="cms-tab-panel" id="tab-projects">
-          <p class="cms-help-text">Projects are loaded directly from <code>data/portfolio-data.js</code>. Below is an active preview of your project entries:</p>
-          <div id="cmsProjectsList" style="display:flex; flex-direction:column; gap:12px;"></div>
+          <p class="cms-help-text">Projects are loaded directly from <code>data/portfolio-data.js</code>. Below is an active catalog preview:</p>
+          <div id="cmsProjectsList" style="display:flex; flex-direction:column; gap:10px;"></div>
         </div>
 
         <!-- Tab: Skills -->
         <div class="cms-tab-panel" id="tab-skills">
-          <p class="cms-help-text">Skills are categorized into Demonstrated Skills and Currently Learning. You can manage them in <code>data/portfolio-data.js</code>.</p>
-          <div id="cmsSkillsList" style="display:flex; flex-direction:column; gap:12px;"></div>
+          <p class="cms-help-text">Skills are categorized into Demonstrated and Active Studies in <code>data/portfolio-data.js</code>.</p>
+          <div id="cmsSkillsList" style="display:flex; flex-direction:column; gap:10px;"></div>
         </div>
 
         <!-- Tab: Journey -->
         <div class="cms-tab-panel" id="tab-journey">
-          <p class="cms-help-text">Your learning trajectory milestones:</p>
-          <div id="cmsJourneyList" style="display:flex; flex-direction:column; gap:12px;"></div>
+          <p class="cms-help-text">Your learning chronology milestones:</p>
+          <div id="cmsJourneyList" style="display:flex; flex-direction:column; gap:10px;"></div>
+        </div>
+
+        <!-- Tab: Achievements -->
+        <div class="cms-tab-panel" id="tab-achievements">
+          <p class="cms-help-text">Your verified achievements and distinctions:</p>
+          <div id="cmsAchievementsList" style="display:flex; flex-direction:column; gap:10px;"></div>
         </div>
 
         <!-- Tab: Export / Save -->
@@ -925,10 +953,10 @@
       <div class="cms-modal-footer">
         <span class="cms-footer-info">Press <kbd>Esc</kbd> to exit • Stored in <code>data/portfolio-data.js</code></span>
         <div class="cms-footer-actions">
-          <button type="button" class="btn btn-secondary" id="cmsCopyCodeBtn" style="padding: 8px 16px; font-size: 0.85rem;">
+          <button type="button" class="btn btn-outlined-ink" id="cmsCopyCodeBtn" style="padding: 8px 16px; font-size: 0.8rem;">
             <span>Copy Code</span>
           </button>
-          <button type="button" class="btn btn-primary" id="cmsCloseDoneBtn" style="padding: 8px 18px; font-size: 0.85rem;">
+          <button type="button" class="btn btn-solid-ink" id="cmsCloseDoneBtn" style="padding: 8px 18px; font-size: 0.8rem;">
             <span>Done</span>
           </button>
         </div>

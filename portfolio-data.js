@@ -1,16 +1,16 @@
 /**
  * ============================================================================
  * VICKEY CHAUDHARY — PORTFOLIO CONTENT DATA STORE
+ * Verified Learning Journey & Authentic Student Profile
  * ============================================================================
  * 
  * HOW TO UPDATE YOUR PORTFOLIO:
- * 1. You can edit this file directly to add, remove, or modify any content!
- * 2. To add a project, simply append an object to the `projects` array.
- * 3. To update your skills, edit the `skills.demonstrated` or `skills.currentlyLearning` arrays.
- * 4. To add a learning milestone, add an entry to the `journey` array.
- * 5. Commit and push this file to GitHub: GitHub Pages will immediately reflect the changes!
- * 
- * No HTML or CSS editing is required to keep your portfolio up to date.
+ * 1. Edit this file to add, remove, or modify any content.
+ * 2. To add a project, append an object to the `projects` array.
+ * 3. To update skills, edit `skills.demonstrated` or `skills.currentlyLearning`.
+ * 4. To add achievements, edit the `achievements` array.
+ * 5. To add a journey milestone, edit the `journey` array.
+ * 6. Commit and push: GitHub Pages reflects your updates instantly!
  * ============================================================================
  */
 
@@ -19,9 +19,11 @@ const PORTFOLIO_DATA = {
     fullName: "Vickey Chaudhary",
     monogram: "VC",
     role: "Aspiring Software Engineer & Developer",
-    statusBadge: "Open to Collaborations & Learning • Pune, India",
-    heroIntro: "Building software from first principles with Python. Passionate about problem solving, algorithms, and crafting clean, functional digital products.",
-    photo: "images.jpg",
+    issueLabel: "VOL. 01 — PUNE, INDIA — 2026",
+    statusBadge: "First-Year Computer Science Student • Pune, India",
+    heroIntro: "Pursuing B.Tech in Computer Science at Newton School of Technology (ADPU). Learning programming with Python, building foundational web projects, and exploring Artificial Intelligence.",
+    photo: "vickey-portrait.png",
+    photoCaption: "Plate 01 — Vickey Chaudhary, Aspiring Software Engineer",
     email: "vickeychaudhary855@gmail.com",
     location: "Pune, Maharashtra, India",
     college: "Newton School of Technology",
@@ -33,34 +35,37 @@ const PORTFOLIO_DATA = {
     linkedinHandle: "vickey-chaudhary",
     whatsappUrl: "https://wa.me/919216856536",
     whatsappDisplay: "+91 9216856536",
-    quickBadges: [
-      { label: "Python Builder", icon: "code" },
-      { label: "B.Tech CSE '30", icon: "academic" },
-      { label: "Newton School of Tech", icon: "building" },
-      { label: "Pune, India", icon: "pin" }
+    curatorIndex: [
+      { num: "01", label: "DISCIPLINE", value: "Computer Science & Python" },
+      { num: "02", label: "ACADEMICS", value: "Newton School of Tech (ADPU)" },
+      { num: "03", label: "FOCUS", value: "Programming Fundamentals & Web" },
+      { num: "04", label: "LOCATION", value: "Pune, Maharashtra, India" }
     ]
   },
 
   about: {
-    heading: "Engineering Mindset & Ambition",
-    badge: "01 // ABOUT ME",
-    lead: "I'm Vickey Chaudhary, a computer science student at Newton School of Technology (Ajeenkya DY Patil University, Pune) who believes that true engineering capability comes from building things yourself, not just watching tutorials.",
+    heading: "The Craft, Curiosity & Direction",
+    badge: "01 // MONOGRAPH",
+    lead: "I'm Vickey Chaudhary, a computer science student at Newton School of Technology (Ajeenkya DY Patil University, Pune) who began programming in August 2026, building software fundamentals step by step.",
     paragraphs: [
-      "My approach to software engineering is grounded in curiosity and first principles. Rather than relying solely on high-level abstractions, I strive to understand what happens under the hood—how Python manages data in memory, how algorithms scale with input size, and how well-architected software solves tangible problems.",
-      "Currently, I spend my days writing modular Python scripts, analyzing algorithmic complexities, practicing version control on GitHub, and exploring modern frontend workflows. My goal is to build deep foundational mastery in computer science and grow into a full-stack engineer who builds resilient, high-impact systems."
+      "My journey into software development started in August 2026 with Python. Rather than rushing through superficial frameworks, I am focusing on building solid fundamentals—understanding variables, control flow, loops, and the logical architecture of code.",
+      "Alongside university coursework in computer science and artificial intelligence, I am learning version control with Git and GitHub, building responsive web interfaces with HTML, CSS, and JavaScript, and working consistently to develop into a capable software engineer."
     ],
     principles: [
       {
+        num: "01",
         title: "Code to Understand",
-        description: "Writing scripts and data structures from scratch to develop intuition for edge cases, performance, and modularity."
+        description: "Writing scripts and exercises hands-on to build intuitive problem-solving skills and understand how code executes."
       },
       {
-        title: "Consistent Builder Cadence",
-        description: "Committing verified code to GitHub, testing scripts rigorously, and turning academic concepts into running programs."
+        num: "02",
+        title: "Cadence of a Learner",
+        description: "Practicing consistently, documenting learning milestones on GitHub, and turning concepts into working programs."
       },
       {
-        title: "Craft & Detail",
-        description: "Valuing clean code formatting, semantic architecture, accessible interfaces, and zero-bullshit engineering."
+        num: "03",
+        title: "Honest Engineering",
+        description: "Focusing on genuine understanding, clean code formatting, accessible interfaces, and steady growth without exaggerated claims."
       }
     ]
   },
@@ -68,148 +73,175 @@ const PORTFOLIO_DATA = {
   projects: [
     {
       id: "portfolio-engine",
-      title: "Personal Portfolio & Decoupled Content Engine",
-      status: "Production / Live",
+      index: "EXHIBIT 01",
+      title: "Personal Web Portfolio & Brand Platform",
+      status: "Active Build / Live",
       featured: true,
-      problem: "Needed a high-performance personal brand platform that communicates engineering potential without relying on generic cookie-cutter templates, while allowing portfolio content to be updated effortlessly without touching raw HTML.",
-      contribution: "Architected a custom dark-themed portfolio from scratch with an isolated JavaScript data layer (portfolio-data.js). Implemented semantic HTML5, keyboard navigation (WCAG AA), responsive CSS Grid, and zero external runtime dependencies.",
-      technologies: ["JavaScript (ES6+)", "CSS3 / Custom Properties", "HTML5 Semantics", "Git & GitHub Pages"],
+      problem: "Needed a clean, authentic personal space to document my learning progression, projects, and contact channels as a computer science student.",
+      contribution: "Developing a personal portfolio using Antigravity, working with HTML5, CSS3, and JavaScript, featuring a decoupled data store and responsive layout.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Antigravity", "GitHub Pages"],
       githubUrl: "https://github.com/vickeychaudhary855-art",
       liveUrl: "#home",
-      takeaway: "Mastered data-view decoupling, client-side progressive enhancement, and building polished UI with zero framework bloat."
+      takeaway: "Gained practical experience in frontend structure, styling, DOM interactions, and deploying via GitHub Pages."
     },
     {
-      id: "python-cli-suite",
-      title: "Python Logic & CLI Utilities Suite",
-      status: "Active Build",
+      id: "ai-hospital-dashboard",
+      index: "EXHIBIT 02",
+      title: "AI-Assisted Hospital Dashboard",
+      status: "Exploration / AI-Assisted",
       featured: true,
-      problem: "Repetitive developer tasks such as text parsing, custom metric formatting, and multi-file organization require reliable, reusable scripts rather than manual effort.",
-      contribution: "Writing a modular collection of command-line tools in Python 3 incorporating robust input validation, modular functions, formatted terminal outputs, and automated test cases.",
-      technologies: ["Python 3", "CLI Architecture", "File I/O", "Pytest Basics"],
+      problem: "Wanted to understand how healthcare interfaces organize patient queues, appointments, and staff status, exploring digital product creation before having formal programming knowledge.",
+      contribution: "Created a hospital dashboard prototype with the help of AI tools before starting programming classes. Guided layout requirements and user flow while learning how digital interfaces come together.",
+      technologies: ["AI Prototyping", "UI Wireframing", "Product Design"],
       githubUrl: "https://github.com/vickeychaudhary855-art",
       liveUrl: null,
-      takeaway: "Deepened practical skills in Python error handling, defensive programming, and writing cleanly separated modules."
+      takeaway: "Sparked my curiosity about software architecture, inspiring me to pursue computer science and learn programming from the ground up."
     },
     {
-      id: "dsa-practice-tracker",
-      title: "Algorithmic Problem Solving & Data Structures Practice",
-      status: "Ongoing Practice",
+      id: "python-foundations-lab",
+      index: "EXHIBIT 03",
+      title: "Python Programming Fundamentals Lab",
+      status: "Active Learning",
       featured: true,
-      problem: "Solving algorithmic problems efficiently requires structured tracking of time/space complexity and recognizing pattern variations across problem domains.",
-      contribution: "Maintaining a documented repository of Python solutions covering array manipulations, two-pointers, frequency counting, recursion, and search algorithms with edge-case breakdowns.",
-      technologies: ["Python 3", "Algorithms", "Complexity Analysis (Big-O)", "Data Structures"],
+      problem: "Building computational thinking requires deliberate practice with fundamental programming constructs, control flow, and iterative logic.",
+      contribution: "Writing and documenting standalone Python practice exercises, solving algorithmic problems focused on conditions and loops, and organizing code using Git.",
+      technologies: ["Python 3", "Logic & Loops", "Git & GitHub"],
       githubUrl: "https://github.com/vickeychaudhary855-art",
       liveUrl: null,
-      takeaway: "Building intuition for algorithmic trade-offs, space complexity, and step-by-step logical decomposition."
+      takeaway: "Strengthening core problem-solving habits and developing a procedural mindset for breaking down problems."
     }
   ],
 
   currentlyBuilding: [
     {
-      title: "Deepening Core Data Structures in Python",
-      focus: "Linked lists, stacks, queues, and recursive tree traversals implemented from scratch.",
-      tag: "DSA Sprint"
+      tag: "PYTHON FUNDAMENTALS",
+      title: "Programming Logic & Loops in Python",
+      focus: "Practicing conditional statements, loops, basic functions, and foundational algorithmic exercises."
     },
     {
-      title: "Building First Lightweight REST API",
-      focus: "Exploring FastAPI to create modular HTTP endpoints with Pydantic validation.",
-      tag: "Backend Exploration"
+      tag: "COLLEGE COURSEWORK",
+      title: "Artificial Intelligence Foundations",
+      focus: "Exploring core concepts of AI and computational thinking through first-year university classes."
     },
     {
-      title: "Git & Shell Workflow Mastery",
-      focus: "Automating terminal tasks, branch workflows, and writing comprehensive project READMEs.",
-      tag: "Developer Tooling"
+      tag: "WEB DEVELOPMENT",
+      title: "Personal Portfolio Development",
+      focus: "Working with HTML, CSS, and JavaScript using Antigravity to craft an accessible personal website."
     }
   ],
 
   skills: {
     demonstrated: [
       {
-        name: "Python",
-        category: "Programming Language",
-        level: "Active Language",
-        highlight: "Core syntax, functions, data structures, file handling, and algorithmic problem solving."
+        name: "Python 3",
+        level: "Foundational Practice",
+        detail: "Syntax, variables, conditional statements, and loops. Building core algorithmic problem-solving habits."
       },
       {
         name: "Git & GitHub",
-        category: "Version Control",
-        level: "Daily Workflow",
-        highlight: "Branching, committing, repository management, Markdown documentation, and GitHub Pages."
+        level: "Learning Workflow",
+        detail: "Basic version control commands, staging, commits, repository tracking, and hosting via GitHub Pages."
       },
       {
-        name: "HTML5 & Accessibility",
-        category: "Web Foundations",
+        name: "HTML5",
         level: "Working Knowledge",
-        highlight: "Semantic page structure, keyboard navigation, meta tags, and accessible document outline."
+        detail: "Semantic elements, document structure, accessibility landmarks, and web page layout."
       },
       {
         name: "Modern CSS3",
-        category: "Design & Styling",
         level: "Working Knowledge",
-        highlight: "Flexbox, CSS Grid, custom properties, responsive media queries, and dark-theme aesthetics."
+        detail: "Flexbox, basic CSS Grid, custom properties, responsive styling, and clean typographic design."
       },
       {
-        name: "Modern JavaScript",
-        category: "Frontend Scripting",
+        name: "JavaScript Basics",
         level: "Working Knowledge",
-        highlight: "ES6+ syntax, DOM manipulation, event handling, clipboard API, and data rendering."
+        detail: "DOM manipulation, event listeners, array methods, and dynamic page hydration."
       }
     ],
 
     currentlyLearning: [
       {
-        name: "Data Structures & Algorithms",
-        focus: "Arrays, lists, recursion, sorting/searching algorithms, and asymptotic complexity (Big-O).",
-        status: "Active Study"
+        name: "Artificial Intelligence",
+        status: "College Classes",
+        detail: "Exploring foundational AI concepts and computational logic through university coursework."
       },
       {
-        name: "Object-Oriented System Design",
-        focus: "Classes, inheritance, encapsulation, polymorphism, and modular architecture patterns.",
-        status: "Active Study"
+        name: "Algorithmic Problem Solving",
+        status: "Active Practice",
+        detail: "Solving beginner coding exercises, understanding iteration, loops, and procedural thinking."
       },
       {
-        name: "Backend APIs & Web Services",
-        focus: "HTTP methods, REST conventions, JSON serialization, and Python web frameworks (FastAPI/Flask).",
-        status: "Exploring"
+        name: "Web Development Craft",
+        status: "Ongoing Study",
+        detail: "Learning modern frontend patterns, responsive layouts, and user interface accessibility."
       },
       {
-        name: "Linux CLI & Scripting",
-        focus: "Zsh/Bash commands, piping, process management, and shell productivity tools.",
-        status: "Active Study"
+        name: "Computer Science Foundations",
+        status: "B.Tech Program",
+        detail: "Core coursework in Computer Science and Technology at Newton School of Technology."
       }
     ]
   },
 
   journey: [
     {
-      year: "2024",
+      year: "August 2026",
       period: "Milestone 01",
-      title: "First Lines of Code & Computational Logic",
-      description: "Started learning Python programming. Built first terminal-based scripts, mastered variables, loops, conditionals, and wrote initial algorithmic problem solutions."
+      title: "Beginning My Computer Science Journey",
+      description: "Joined Newton School of Technology at Ajeenkya DY Patil University, Pune, to pursue B.Tech in Computer Science and Technology. Expected graduation: 2030."
     },
     {
-      year: "2024",
+      year: "August 2026",
       period: "Milestone 02",
-      title: "Enrolled at Newton School of Technology (ADPU)",
-      description: "Admitted into the B.Tech Computer Science & Technology program (Class of 2030) at Newton School of Technology, Ajeenkya DY Patil University, Pune, committing to intensive CS training."
+      title: "Started Learning Python",
+      description: "Started my programming journey with Python. Currently building programming fundamentals and have progressed through loops."
     },
     {
-      year: "2024",
+      year: "September 2026",
       period: "Milestone 03",
-      title: "Version Control & Open Source Hub Setup",
-      description: "Configured local Git environment and established GitHub profile (@vickeychaudhary855-art). Began maintaining daily code commits and documenting learning."
+      title: "Entered the Git & GitHub Ecosystem",
+      description: "Started learning Git and GitHub to understand version control and software project management."
     },
     {
-      year: "2024",
+      year: "2026",
       period: "Milestone 04",
-      title: "Engineered Decoupled Personal Portfolio",
-      description: "Designed, coded, and deployed a high-performance personal brand platform with an isolated content data layer, responsive dark layout, and accessibility features."
+      title: "Built My First AI-Assisted Hospital Dashboard",
+      description: "Created a hospital dashboard with the help of AI tools before I had programming knowledge. This was an early experience of building a digital product using AI assistance."
     },
     {
-      year: "Current",
-      period: "Active Sprint",
-      title: "Algorithmic Problem Solving & Microservices",
-      description: "Deepening data structure proficiency in Python while building modular CLI utilities and preparing to architect my first RESTful web application."
+      year: "2026",
+      period: "Milestone 05",
+      title: "Started Building My Personal Web Portfolio",
+      description: "Started developing my personal portfolio using Antigravity and working with HTML, CSS and JavaScript."
+    }
+  ],
+
+  currentFocus: {
+    heading: "Currently Exploring",
+    items: [
+      "Artificial Intelligence through college classes.",
+      "Continuing my programming and web development learning journey."
+    ]
+  },
+
+  achievements: [
+    {
+      num: "01",
+      title: "Admission to Newton School of Technology (ADPU)",
+      category: "Academic Selection",
+      description: "Selected into the B.Tech in Computer Science & Technology program (Class of 2030) through entrance evaluation."
+    },
+    {
+      num: "02",
+      title: "Engineered Personal Web Portfolio",
+      category: "Web Development",
+      description: "Developed an editorial personal brand website using Antigravity, working with HTML, CSS, JavaScript, and an isolated data store."
+    },
+    {
+      num: "03",
+      title: "Active Version Control Practice",
+      category: "Developer Foundations",
+      description: "Maintaining Git repositories on GitHub (@vickeychaudhary855-art) to track personal coding exercises and coursework."
     }
   ],
 
@@ -218,8 +250,8 @@ const PORTFOLIO_DATA = {
     university: "Ajeenkya DY Patil University",
     location: "Pune, Maharashtra, India",
     degree: "Bachelor of Technology (B.Tech) — Computer Science & Technology",
-    timeline: "2024 – 2030 (Expected)",
-    note: "Focusing on core computer science foundations, algorithms, systems programming, and modern software engineering practices."
+    timeline: "2026 – 2030 (Expected)",
+    note: "Focusing on core computer science foundations, programming fundamentals, mathematics, and modern software development practices."
   }
 };
 
@@ -230,4 +262,3 @@ if (typeof window !== "undefined") {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PORTFOLIO_DATA;
 }
-
